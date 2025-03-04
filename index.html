@@ -1,54 +1,144 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Добро пожаловать в Седону</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
+
   <body>
     <header class="header-main">
-      <nav class="nav-main">
-        <section class="dashboard">
-          <img class="logo" src="">
-          <ul class="nav-menu">
-            <li>Главная</li>
-            <li>О Седоне</li>
-            <li>Гостиницы</li>
-          </ul>
-        </section>
-        <section class="user-menu">
-          <div class="icons"></div>
-          <div class="wannago-button"></div>
-        </section>
+      <nav class="navigation">
+        <!--А если убрать ul и оставить только ссылки внутри nav или div? у списков ведь надо убирать маркеры и margins
+        <a href="index.html"><img class="logo" src="img/logo.svg" alt="логотип"></a>
+        <nav class="navigation-menu">
+          <a class="navigation-item" href="index.html">Главная</a></li>
+          <a class="navigation-item" href="about.html">О Седоне</a></li>
+          <a class="navigation-item" href="hotels.html">Гостиницы</a></li>
+        </nav>-->
+
+        <ol class="navigation-menu">
+          <li><a href="index.html"><img class="logo" src="img/logo.svg" alt="логотип"></a>
+          <li><a class="navigation-item navigation-item-current" href="index.html">Главная</a></li>
+          <li><a class="navigation-item" href="about.html">О Седоне</a></li>
+          <li><a class="navigation-item" href="hotels.html">Гостиницы</a></li>
+        </ol>
+        <!--а можно div вместо ul?-->
+        <ol class="navigation-buttons">
+          <li><a class="navigation-item" href="#"><span class="visually-hidden search-button">Поиск</span></a></li>
+          <li><a class="navigation-item" href="#"><span class="visually-hidden favorites-button">Избранное</span>
+              <span class="fav_num">12</span></a></li>
+          <li><a class="hotel-search-btn" href="#"><img src="img/wannago-button.png" alt="Поиск гостиницы в Седоне"></a></li>
+          <!--лучше вставить кнопку как img, или как фон для span?-->
+        </ol>
       </nav>
     </header>
 
-    <main>
+    <main class="main-index">
       <section class="welcome">
-        <section class="welcome-plaque">
-          <img class="welcome-background" src="">
-          png png png</section>
-        <section class="welcome-divider"> svg </section>
-        <section class="main-title">
-          <h1 class="title">Седона — небольшой городок в Аризоне,
-            заслуживающий большего!</h1>
-          <p class="reasons">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-        </section>
+        <h1 class="visually-hidden">Приглашение посетить Седону</h1>
+        <!--можно использовать атрибут html hidden?-->
+        <img src="img/welcome.jpg" alt="Welcome to Sedona">
+        <!--здесь не фон, а надпись-->
       </section>
-      <section class="advantages">
+
+      <section class="main-discription">
+        <h2 class="visually-hidden">О Седоне</h2>
+        <h3 class="discription">Седона — небольшой городок в Аризоне, заслуживающий большего!</h3><!--Этот большой шрифт одинаковый во всех разделах. Можно его сделать <h>?-->
+        <p class="reasons">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
       </section>
-      <section class="invitation">
+
+      <section class="main-advantages">
+        <h2 class="visually-hidden">Преимущества Седоны</h2>
+        <ul class="advantages-list">
+          <li class="advantages-item">
+            <h3 class="advantages-title">Настоящий<br>городок</h3>
+            <span class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</span></li>
+          <li class="advantages-item">
+            <h3 class="advantages-title">Небольшая<br>площадь</h3>
+            <span class="advantages-description">Все достопримечательности находятся очень близко</span></li>
+          <li class="advantages-item">
+            <h3 class="advantages-title">Красивая<br>дорога</h3>
+            <span class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</span></li>
+          <li class="advantages-item">
+            <h3 class="advantages-title">Мало<br>туристов</h3>
+            <span class="advantages-description">Большинство едет в Гранд Каньон и толпится там</span></li>
+          <li class="advantages-item">
+            <span class="visually-hidden">Вид из окна в Седоне</span></li>
+            <!--Можно ли скрыть текст, но оставить его фон?-->
+          <li class="advantages-item">
+            <span class="visually-hidden">Вид на скалы и каньон</span></li>
+        </ul>
       </section>
-      <section class="features">
+
+      <section class="main-invitation">
+        <h2 class="visually-hidden">Приглашение</h2>
+        <h3 class="discription">Приезжайте в Седону отдохнуть в комфорте и уюте!</h3>
+        <p class="reasons">Опытный персонал и качественное обслуживание!</p>
       </section>
+
+      <section class="main-features">
+        <h2 class="visually-hidden">Особенности Седоны</h2>
+        <ul class="features-list">
+          <li class="features-item">
+            <h3 class="advantages-title">Настоящий<br>городок</h3>
+            <span class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</span></li>
+          <li class="features-item">
+            <h3 class="advantages-title">Небольшая<br>площадь</h3>
+            <span class="advantages-description">Все достопримечательности находятся очень близко</span></li>
+          <li class="features-item">
+            <h3 class="advantages-title">Красивая<br>дорога</h3>
+            <span class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</span></li>
+        </ul>
+      </section>
+
       <section class="hotel-search">
+        <h2 class="visually-hidden">Поиск гостиницы</h2>
+        <h3 class="discription">Заинтересовались?</h3>
+        <p class="reasons">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <a class="hotel-search-btn" href="#"><img src="img/Search-hotels-button.png" alt="Поиск гостиницы в Седоне"></a>
       </section>
+
       <section class="subscribe">
+        <h3 class="discription">Подпишитесь на рассылку</h3>
+        <p class="reasons">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <p class="subscription">
+        <form action="https://echo.htmlacademy.ru/courses" method="post">
+          <input class="field" type="email" id="submit-email" name="email" placeholder="Ваш e-mail">
+          <input type="submit" value="Подписаться">
+        </form>
       </section>
+    </main>
 
-
-    <footer>
+    <footer class="page-footer">
+        <div class="footer-social">
+          <h2 class="visually-hidden">Мы с соцсетях</h2>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="button" href="#">
+                <span class="visually-hidden">ВКонтакте</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="button" href="#">
+                <span class="visually-hidden">Телеграм</span>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="button" href="#">
+                <span class="visually-hidden">YouTube</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <address class="contacts"><p>+7&nbsp;(812)&nbsp;812-12-12</p></address>
+        <div class="footer-logo">
+          <a href="#"  ></a>
+        </div>
 
     </footer>
   </body>
+
 </html>
