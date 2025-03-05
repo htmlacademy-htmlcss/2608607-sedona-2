@@ -93,8 +93,10 @@
           oninput="costoutput.value=costcount.value">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-            <input type="text" name="cost-input-min">
-            <input type="text" name="cost-input-max">
+            <input type="number" name="cost-input-min" id="cost-input-min" min="0">
+            <span class="input-parameter">от</span>
+            <input type="number" name="cost-input-max" id="cost-input-max" max="9000">
+            <span class="input-parameter">до</span>
             <button class="button" type="submit">Применить</button>
             <button class="button button-no-bgrnd" type="reset">Сбросить</button>
             <input type="range" id="costcount" name="costcount" min="0" max="9000" step="100">
