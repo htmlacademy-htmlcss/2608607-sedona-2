@@ -3,41 +3,31 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>Добро пожаловать в Седону</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
-    <header class="header-main">
+    <header class="header-main" data-test="header">
       <nav class="navigation">
-        <!--А если убрать ul и оставить только ссылки внутри nav или div? у списков ведь надо убирать маркеры и margins
-        <a href="index.html"><img class="logo" src="img/logo.svg" alt="логотип"></a>
-        <nav class="navigation-menu">
-          <a class="navigation-item" href="index.html">Главная</a></li>
-          <a class="navigation-item" href="about.html">О Седоне</a></li>
-          <a class="navigation-item" href="hotels.html">Гостиницы</a></li>
-        </nav>-->
-
-        <ol class="navigation-menu">
-          <li><a href="index.html"><img class="logo" src="img/logo.svg" alt="логотип"></a>
+        <ul class="navigation-menu">
+          <li><a href="index.html"><img class="logo" src="img/logo.svg" alt="логотип с надписью City of Sedona"></a>
           <li><a class="navigation-item" href="index.html">Главная</a></li>
           <li><a class="navigation-item" href="about.html">О Седоне</a></li>
           <li><a class="navigation-item navigation-item-current" href="hotels.html">Гостиницы</a></li>
-        </ol>
-        <!--а можно div вместо ul?-->
+        </ul>
         <ol class="navigation-buttons">
           <li><a class="navigation-item" href="#"><span class="visually-hidden search-button">Поиск</span></a></li>
           <li><a class="navigation-item" href="#"><span class="visually-hidden favorites-button">Избранное</span>
               <span class="fav_num">12</span></a></li>
           <li><a class="hotel-search-btn" href="#"><img src="img/wannago-button.png" alt="Поиск гостиницы в Седоне"></a>
           </li>
-          <!--лучше вставить кнопку как img, или как фон для span?-->
         </ol>
       </nav>
     </header>
 
-    <main class="main-inner">
+    <main class="main-inner" data-test="main">
       <header class="inner-header">
         <h1 class="filter-header">Гостиницы Седоны</h1>
         <ol class="breadcrumbs">
@@ -49,7 +39,7 @@
           </li>
         </ol>
       </header>
-      <section class="catalog-filter">
+      <section class="catalog-filter" data-test="filter">
         <h2 class="visually-hidden">Подбор гостиниц по параметрам</h2>
         <form class="catalog-forms" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
@@ -69,8 +59,6 @@
               </li>
             </ul>
           </fieldset>
-        </form>
-        <form class="catalog-forms" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
@@ -88,24 +76,22 @@
               </li>
             </ul>
           </fieldset>
-        </form>
-        <form class="catalog-forms" action="https://echo.htmlacademy.ru/" method="post"
-          oninput="costoutput.value=costcount.value">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+            <label class="visually-hidden" for="cost-input-min">цена от</label>
             <input type="number" name="cost-input-min" id="cost-input-min" min="0">
             <span class="input-parameter">от</span>
+            <label class="visually-hidden" for="cost-input-max">цена до</label>
             <input type="number" name="cost-input-max" id="cost-input-max" max="9000">
             <span class="input-parameter">до</span>
             <button class="button" type="submit">Применить</button>
             <button class="button button-no-bgrnd" type="reset">Сбросить</button>
-            <input type="range" id="costcount" name="costcount" min="0" max="9000" step="100">
-            <output name="costoutput">0</output>
+            <span class="slider">слайдер</span>
           </fieldset>
         </form>
       </section>
 
-      <section class="catalog-showcase">
+      <section class="catalog-showcase" data-test="catalog">
         <header class="catalog-showcase-header">
           <h2 class="catalog-showcase-heading">Найдено гостиниц:<span class="hotels-found">38</span></h2>
           <select class="select-control" aria-label="Сортировка">
@@ -131,7 +117,8 @@
             <span class="location-price-from">От 4000 ₽</span>
             <a class="location-card-button button" href="#">ПОДРОБНЕЕ</a>
             <a class="location-card-button button-favorite" href="#">В ИЗБРАННОЕ</a>
-            <!--форма рейтинга со звездочками и поле рейтинга-->
+            <span class="star-rating location-card-button">4 звезды</span>
+            <span class="num-rating location-card-button">рейтинг: 8,5</span>
           </li>
           <li class="location-card">
             <a class="location-card-link" href="location.html">
@@ -142,7 +129,8 @@
             <span class="location-price-from">От 5000 ₽</span>
             <a class="location-card-button button" href="#">ПОДРОБНЕЕ</a>
             <a class="location-card-button button-favorite-active" href="#">В ИЗБРАННОМ</a>
-            <!--форма рейтинга со звездочками и поле рейтинга-->
+            <span class="star-rating location-card-button">4 звезды</span>
+            <span class="num-rating location-card-button">рейтинг: 9,2</span>
           </li>
           <li class="location-card">
             <a class="location-card-link" href="location.html">
@@ -153,7 +141,8 @@
             <span class="location-price-from">От 2500 ₽</span>
             <a class="location-card-button button" href="#">ПОДРОБНЕЕ</a>
             <a class="location-card-button button-favorite" href="#">В ИЗБРАННОE</a>
-            <!--форма рейтинга со звездочками и поле рейтинга-->
+            <span class="star-rating location-card-button">3 звезды</span>
+            <span class="num-rating location-card-button">рейтинг: 6,9</span>
           </li>
           <li class="location-card">
             <a class="location-card-link" href="location.html">
@@ -164,7 +153,8 @@
             <span class="location-price-from">От 1500 ₽</span>
             <a class="location-card-button button" href="#">ПОДРОБНЕЕ</a>
             <a class="location-card-button button-favorite" href="#">В ИЗБРАННОE</a>
-            <!--форма рейтинга со звездочками и поле рейтинга-->
+            <span class="star-rating location-card-button">2 звезды</span>
+            <span class="num-rating location-card-button">рейтинг: 5,0</span>
           </li>
         </ul>
       </section>
@@ -193,7 +183,7 @@
         </li>
       </ul>
 
-      <section class="subscribe">
+      <section class="subscribe" data-test="subscribe">
         <h3 class="discription">Подпишитесь на рассылку</h3>
         <p class="reasons">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <p class="subscription">
@@ -204,32 +194,28 @@
       </section>
     </main>
 
-    <footer class="page-footer">
-      <div class="footer-social">
-        <h2 class="visually-hidden">Мы с соцсетях</h2>
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a class="button" href="#">
-              <span class="visually-hidden">ВКонтакте</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="button" href="#">
-              <span class="visually-hidden">Телеграм</span>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="button" href="#">
-              <span class="visually-hidden">YouTube</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <address class="contacts">
-        <p>+7&nbsp;(812)&nbsp;812-12-12</p>
-      </address>
+    <footer class="page-footer" data-test="footer">
+      <h2 class="visually-hidden">Мы с соцсетях</h2>
+      <ul class="footer-social-list">
+        <li class="footer-social-item">
+          <a class="socilal-media-button" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+            <span class="visually-hidden">ВКонтакте</span></a>
+        </li>
+        <li class="footer-social-item">
+          <a class="socilal-media-button" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener"">
+                   <span class=" visually-hidden">Телеграм</span></a>
+        </li>
+        <li class="footer-social-item">
+          <a class="socilal-media-button" href="https://www.youtube.com/user/htmlacademyru" target="_blank"
+            rel="noreferrer noopener"">
+                   <span class=" visually-hidden">YouTube</span></a>
+        </li>
+      </ul>
+
+      <address class="contacts"><a href="tel:+4733378901">+7 (812)-12-12</a>+7&nbsp;(812)&nbsp;812-12-12</address>
       <div class="footer-logo">
-        <a href="#"></a>
+        <a class="created-by-logo" href="https://htmlacademy.ru"><span class="visually-hidden">логотип html
+            академии</span></a>
       </div>
 
     </footer>
