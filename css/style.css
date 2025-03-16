@@ -1,17 +1,238 @@
-body
-header
-main
-footer
-.header-main
-.nav-main
-.header-catalog
-.nav-menu
-.logo
-.dashboard
-.welcome
-.advantages
-.invitation
-.features
-.hotel-search
-.subscribe
-.catalog
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-style: bold;
+  font-display: swap;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  }
+
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 118%;
+  text-align: center;
+  color: rgb(0,0,0);
+  }
+
+.visually-hidden {
+  visibility: hidden;
+  }
+.content-image {
+  display: block;
+  margin: 0 auto;
+}
+
+  /* header */
+.navigation-menu {
+  background-color: rgb(255, 255, 255);
+  list-style: none;
+
+  }
+.navigation-buttons {
+  background-color: rgb(255, 255, 255);
+  list-style: none;
+  }
+
+.navigation-item {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: black;
+}
+
+.search-button {
+  display: inline-block;
+  margin: 0 auto;
+  width: 44px;
+  height: 64px;
+  background-color: rgb(255, 255, 255);
+  background-image: url("../img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center;
+  cursor: pointer;
+  }
+
+.favorites-button {
+  display: inline-block;
+  margin: 0 auto;
+  width: 44px;
+  height: 64px;
+  background-color: rgb(255, 255, 255);
+  background-image: url("../img/icon-fav.svg");
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center;
+  cursor: pointer;
+
+}
+.fav_num {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(125, 181, 79);
+  border-radius: 50%;
+  padding: 6px; /*не подходит*/
+  text-align: center;
+  text-decoration: none;
+  }
+.hotel-search-btn {
+  display: inline-block;
+  margin: 0 auto;
+  width: auto;
+  height: 36px;
+  background-color: rgba(117, 97, 87, 1);
+  border-radius: 4px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  align-self: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 8px 34px;
+
+}
+/*footer*/
+.socilal-media-button {
+  text-decoration: none;
+}
+.tel {
+  padding: 0;
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 40px;
+  letter-spacing: 0%;
+  text-align: center;
+
+}
+.created-by-logo {
+text-decoration: none;
+
+}
+/*index-main*/
+
+.welcome {
+  background-image: url("../img/welcome-divider.png"), url("../img/bg-welcome.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, center; /*фон welcome-divider нужно опустить еще ниже*/
+  background-color: rgb(255, 255, 255);
+  padding: 0;
+}
+
+.discription {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  }
+.reasons {
+font-family: "PT Sans", "Arial", sans-serif;
+font-weight: 400;
+font-size: 22px;
+line-height: 26px;
+text-transform: none;
+text-align: center;
+
+}
+.advantages-list {
+  font-size: 18px;
+  line-height: 21px;
+  list-style: none;
+  text-align: center;
+}
+.advantages-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+.advantages-item {
+  background-color: rgba(131, 179, 211, 12%);
+}
+
+.advantages-item:first-child, .advantages-item:last-child {
+  background-color: rgba(130, 179, 211, 1);
+  color: rgb(255, 255, 255);
+}
+.advantages-item:nth-child(3) {
+  background-color: rgba(131, 179, 211, 20%);
+}
+
+.subscribe {
+  display: block;
+  height: 414px;
+  width: auto;
+  background-image: url("../img/bg-subscribe-blur.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(255, 255, 255);
+  padding: 0;
+  color: white;
+}
+.subscribe-catalog {
+/*как убрать фоновое изображение?*/
+
+}
+.field {
+  margin: 0 auto;
+  width: auto;
+  height: 52px;
+  background-color: white;
+  border-width: 0;
+  border-radius: 4px 0 0 4px;
+  color: rgba(0, 0, 0, 1);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  align-self: center;
+  text-decoration: none;
+  padding-left: 20px;
+}
+
+.button-subscribe {
+  display: inline-block;
+  margin: 0 auto;
+  width: auto;
+  height: 52px;
+  background-color: rgba(130, 179, 211, 1);
+  border: 0;
+  border-radius: 0 4px 4px 0;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0%;
+  text-align: center;
+  align-self: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 8px 50px;
+
+}
