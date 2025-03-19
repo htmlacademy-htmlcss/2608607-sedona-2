@@ -31,12 +31,14 @@
     </header>
 
     <main class="main-inner" data-test="main">
+      <div class="catalog-filter-wrapper">
       <header class="inner-header">
         <h1 class="filter-header">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html"><img src="img/" alt="Главная"></a>
+            <a class="breadcrumbs-link" href="index.html"><img src="img/home.svg" width="12px" height="12px" alt="Главная"></a>
           </li>
+          <li class="breadcrumbs-item">&gt;</li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link">Гостиницы</a>
           </li>
@@ -87,12 +89,13 @@
             <label class="visually-hidden" for="cost-input-max">цена до</label>
             <input type="number" name="cost-input-max" id="cost-input-max" max="9000">
             <span class="input-parameter">до</span>
-            <button class="button" type="submit">Применить</button>
-            <button class="button button-no-bgrnd" type="reset">Сбросить</button>
+            <button class="button filter-submit-btn" type="submit">Применить</button>
             <span class="slider">слайдер</span>
+            <button class="button button-reset-btn" type="reset">Сбросить</button>
           </fieldset>
         </form>
       </section>
+      </div>
 
       <section class="catalog-showcase" data-test="catalog">
         <header class="catalog-showcase-header">
@@ -102,12 +105,12 @@
             <option value="cheap">Сначала популярные</option>
             <option value="expensive">Сначала дорогие</option>
           </select>
-          <a href="#" class="button button-active">
-            <span class="visually-hidden">Показать карточки</span></a>
+          <a class="button" href="#" class="button button-active">
+            <span class="visually-hidden">Вид: плитки</span><span class="icon-tiles-view view-type"></span></a>
           <a class="button" href="#">
-            <span class="visually-hidden">Показывать по одной</span></a>
+            <span class="visually-hidden">Вид: по одной</span><span class="icon-single-view view-type"></a>
           <a class="button" href="#">
-            <span class="visually-hidden">Показать список</span></a>
+            <span class="visually-hidden">Вид: список</span><span class="icon-list-view view-type"></span></a>
         </header>
         <!--Карточки гостиниц-->
         <ul class="location-list">
@@ -120,9 +123,9 @@
             <span class="location-type">Гостиница</span>
             <span class="location-price-from">От 4000 ₽</span>
             <a class="location-card-button button" href="#">подробнее</a>
-            <a class="location-card-button button-favorite" href="#">в избранное</a>
-            <span class="star-rating location-card-button visually-hidden">4 звезды</span>
-            <span class="num-rating location-card-button">рейтинг: 8,5</span>
+            <a class="button-favorite" href="#">в избранное</a>
+            <span class="visually-hidden">4 звезды</span><span class="star-rating"></span>
+            <span class="num-rating">рейтинг: 8,5</span>
           </li>
           <li class="location-card">
             <a class="location-card-link" href="location.html">
@@ -133,9 +136,9 @@
             <span class="location-type">Гостиница</span>
             <span class="location-price-from">От 5000 ₽</span>
             <a class="location-card-button button" href="#">подробнее</a>
-            <a class="location-card-button button-favorite-active" href="#">в избранном</a>
-            <span class="star-rating location-card-button visually-hidden">4 звезды</span>
-            <span class="num-rating location-card-button">рейтинг: 9,2</span>
+            <a class="button-favorite-active" href="#">в избранном</a>
+            <span class="visually-hidden">4 звезды</span><span class="star-rating"></span>
+            <span class="num-rating">рейтинг: 9,2</span>
           </li>
           <li class="location-card">
             <a class="location-card-link" href="location.html">
@@ -146,9 +149,9 @@
             <span class="location-type">Гостиница</span>
             <span class="location-price-from">От 2500 ₽</span>
             <a class="location-card-button button" href="#">подробнее</a>
-            <a class="location-card-button button-favorite" href="#">в избранное</a>
-            <span class="star-rating location-card-button visually-hidden">3 звезды</span>
-            <span class="num-rating location-card-button">рейтинг: 6,9</span>
+            <a class="button-favorite" href="#">в избранное</a>
+            <span class="visually-hidden">3 звезды</span><span class="star-rating"></span>
+            <span class="num-rating">рейтинг: 6,9</span>
           </li>
           <li class="location-card">
             <a class="location-card-link" href="location.html">
@@ -159,9 +162,9 @@
             <span class="location-type">Гостиница</span>
             <span class="location-price-from">От 1500 ₽</span>
             <a class="location-card-button button" href="#">подробнее</a>
-            <a class="location-card-button button-favorite" href="#">в избранное</a>
-            <span class="star-rating location-card-button visually-hidden">2 звезды</span>
-            <span class="num-rating location-card-button">рейтинг: 5,0</span>
+            <a class="button-favorite" href="#">в избранное</a>
+            <span class="visually-hidden">2 звезды</span><span class="star-rating"></span>
+            <span class="num-rating">рейтинг: 5,0</span>
           </li>
         </ul>
       </section>
