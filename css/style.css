@@ -383,11 +383,11 @@ address {
 }
 
 .advantages-item {
-  height: 385px;
+  min-height: 385px;
   width: 400px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: rgba(131, 179, 211, 12%);
@@ -416,34 +416,54 @@ address {
 
 .advantages-item-wrapper {
   display: flex;
+  width: 400px;
+  min-height: 385px;
+
+  outline: 3px solid coral;
+}
+
+.advantages-content-wrapper {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 230px;
+  margin: auto;
   outline: solid 3px blue;
 }
 
-.advantages-item-long .advantages-item-wrapper {
-  height: 181px;
-}
 
 .advantages-item-short .advantages-item-wrapper {
   height: 160px;
 }
 
 .advantages-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-
+  padding-bottom: 30px;
   outline: solid 3px silver;
 }
 
-.advantages-item-divider-light {
+.advantages-item-long .advantages-title::after {
+  /*finish*/
+  content: "";
   width: 60px;
   height: 2px;
+  margin-top: 30px;
   background-color: rgba(255, 255, 255, 30%);
+}
+
+.advantages-item-short .advantages-title::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 30%);
 }
 
 .advantages-item-divider-dark {
@@ -770,11 +790,16 @@ address {
   outline: 3px solid greenyellow;
 }
 
+.input-area {
+  display: flex;
+  width: 288px;
+
+  outline: 3px solid coral;
+}
 
 
-#cost-input-min {
-  /*как поставить плейсхолдер справа?*/
-  /*изменить на класс*/
+.cost-input-min {
+  /*поставить псевдоэлемент справа*/
   margin: 0 auto;
   max-width: 120px;
   min-height: 48px;
@@ -790,7 +815,7 @@ address {
   padding-left: 20px;
 }
 
-#cost-input-max {
+.cost-input-max {
   margin: 0 auto;
   max-width: 120px;
   min-height: 48px;
@@ -804,6 +829,12 @@ address {
   text-align: left;
   text-decoration: none;
   padding-left: 20px;
+}
+
+.cost-input-min::after {
+  /*доделать*/
+  content: " от";
+  color: #756157;
 }
 
 .catalog-filter-buttons {
@@ -951,17 +982,33 @@ address {
 }
 
 .location-card {
+  display: grid;
   width: 340px;
-  height: 438px;
+  min-height: 438px;
+  box-sizing: border-box;
+  padding: 20px;
+  grid-template-columns: 1fr 18px 1fr;
+  grid-template-rows: min-content min-content min-content min-content min-content;
+  gap: 16px 0;
   outline: 3px solid lightcoral
 }
 
 .location-card-link {
+  display: block;
+  width: 300px;
+  min-height: 206px;
   text-decoration: none;
+  grid-column: 1 / -1;
+  grid-row: 1;
   color: rgb(0, 0, 0);
 }
 
-.location-card-image {}
+.location-card-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 16px;
+}
 
 .location-card-title {
   font-weight: 700;
@@ -969,13 +1016,30 @@ address {
   line-height: 28px;
   text-transform: capitalize;
   text-decoration: none;
+  margin: 0;
+  width: 100%;
+  word-wrap: break-word;
+  grid-column: 1 / -1;
+  grid-row: 2;
 }
 
-.location-type,
+.location-type {
+  font-weight: 400;
+  line-height: 23px;
+  text-align: left;
+  word-wrap: break-word;
+  grid-column: 1;
+  grid-row: 3;
+}
+
 .location-price-from {
   font-weight: 400;
   font-size: 18px;
-  line-height: 21px;
+  line-height: 23px;
+  word-wrap: break-word;
+  text-align: right;
+  grid-column: 3;
+  grid-row: 3;
 }
 
 .location-card-button {
@@ -983,6 +1047,8 @@ address {
   margin: 0 auto;
   width: 140px;
   height: 36px;
+  box-sizing: border-box;
+  padding: 10px 0 9px;
   background-color: rgb(117, 97, 87);
   border-radius: 4px;
   color: rgb(255, 255, 255);
@@ -992,12 +1058,14 @@ address {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  word-wrap: break-word;
+  grid-column: 1;
+  grid-row: 4;
 
 }
 
 .button-favorite {
   display: inline-block;
-  margin: 0 auto;
   width: 140px;
   height: 36px;
   background-color: rgb(130, 179, 211);
@@ -1009,6 +1077,8 @@ address {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  grid-column: 3;
+  grid-row: 4;
 }
 
 .button-favorite-active {
@@ -1028,15 +1098,31 @@ address {
 }
 
 .star-rating {
-  display: inline-block;
-  margin: 0 auto;
-  width: 140px;
-  height: 37px;
+  align-self: center;
+  grid-column: 1;
+  grid-row: 5;
+  display: grid;
+  grid-template-columns: repeat(5, 18px);
+  column-gap: 7px;
+}
+
+.star-rating-star::after {
+  display: block;
+  content: "";
+  width: 18px;
+  height: 17px;
+  background-image: url("../img/star.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
 }
 
 .num-rating {
   display: inline-block;
+    grid-column: 2 / 4;
+      grid-row: 5;
   margin: 0 auto;
+
   width: 140px;
   height: 37px;
   background-color: rgb(242, 242, 242);

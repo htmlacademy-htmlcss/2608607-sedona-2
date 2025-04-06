@@ -41,7 +41,7 @@
         </div>
 
       </header>
-
+      <!--filter input controls-->
       <main class="main-index main-container" data-test="main">
         <section class="catalog-filter-section">
           <div class="catalog-filter-wrapper">
@@ -97,11 +97,17 @@
                 </fieldset>
                 <fieldset class="catalog-filter-range">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                  <label class="visually-hidden" for="cost-input-min">цена от</label>
-                  <input type="number" name="cost-input-min" placeholder="от" id="cost-input-min" min="0">
-                  <label class="visually-hidden" for="cost-input-max">цена до</label>
-                  <input type="number" name="cost-input-max" placeholder="до" id="cost-input-max" max="9000">
-                  <br>
+
+                  <div class="input-area">
+                    <label class="visually-hidden" for="cost-input-min">цена от</label>
+                    <input class="cost-input-min" type="number" name="cost-input-min" value="0" id="cost-input-min"
+                      min="0">
+
+                    <label class="visually-hidden" for="cost-input-max">цена до</label>
+                    <input class="cost-input-max" type="number" name="cost-input-max" value="9000" id="cost-input-max"
+                      max="9000">
+
+                  </div>
                   <span class="slider">слайдер</span>
                 </fieldset>
                 <fieldset class="catalog-filter-buttons">
@@ -142,10 +148,10 @@
               <a class="location-card-button button" href="#">подробнее</a>
               <a class="button-favorite" href="#">в избранное</a>
               <div class="star-rating">
-                <img class="star-icon" src="img/star.svg" width="18px" height="17px" alt="звезда">
-                <img class="star-icon" src="img/star.svg" width="18px" height="17px" alt="звезда">
-                <img class="star-icon" src="img/star.svg" width="18px" height="17px" alt="звезда">
-                <img class="star-icon" src="img/star.svg" width="18px" height="17px" alt="звезда">
+                <span class="star-rating-star"></span>
+                <span class="star-rating-star"></span>
+                <span class="star-rating-star"></span>
+                <span class="star-rating-star"></span>
               </div>
               <div class="num-rating">рейтинг: 8,5</div>
             </li>
@@ -160,10 +166,10 @@
               <a class="location-card-button button" href="#">подробнее</a>
               <a class="button-favorite-active" href="#">в избранном</a>
               <div class="star-rating">
-                <img class="star-icon" src="img/star.svg" width="18px" height="17px" alt="звезда">
-                <img class="star-icon" src="img/star.svg" width="18px" height="17px" alt="звезда">
-                <img class="star-icon" src="img/star.svg" width="18px" height="17px" alt="звезда">
-                <img class="star-icon" src="img/star.svg" width="18px" height="17px" alt="звезда">
+                <span class="star-rating-star"></span>
+                <span class="star-rating-star"></span>
+                <span class="star-rating-star"></span>
+                <span class="star-rating-star"></span>
               </div>
               <div class="num-rating">рейтинг: 9,2</div>
             </li>
@@ -178,9 +184,9 @@
               <a class="location-card-button button" href="#">подробнее</a>
               <a class="button-favorite" href="#">в избранное</a>
               <div class="star-rating">
-                <img class="star-icon" src="img/star.svg" width="18px" height="17px" alt="звезда">
-                <img class="star-icon" src="img/star.svg" width="18px" height="17px" alt="звезда">
-                <img class="star-icon" src="img/star.svg" width="18px" height="17px" alt="звезда">
+                <span class="star-rating-star"></span>
+                <span class="star-rating-star"></span>
+                <span class="star-rating-star"></span>
               </div>
               <div class="num-rating">рейтинг: 6,9</div>
             </li>
@@ -195,36 +201,36 @@
               <a class="location-card-button button" href="#">подробнее</a>
               <a class="button-favorite" href="#">в избранное</a>
               <div class="star-rating">
-                <img class="star-icon" src="img/star.svg" width="18px" height="17px" alt="звезда">
-                <img class="star-icon" src="img/star.svg" width="18px" height="17px" alt="звезда">
+                <span class="star-rating-star"></span>
+                <span class="star-rating-star"></span>
               </div>
               <span class="num-rating">рейтинг: 5,0</span>
             </li>
           </ul>
 
-        <div class="pagination-container">
-          <ul class="pagination">
-            <li class="pagination-item">
-              <a class="pagination-link pagination-current">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">4</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link pagination-next" href="#">&#8230;</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">10</a>
-            </li>
-          </ul>
-        </div>
-      </section>
+          <div class="pagination-container">
+            <ul class="pagination">
+              <li class="pagination-item">
+                <a class="pagination-link pagination-current">1</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">4</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link pagination-next" href="#">&#8230;</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">10</a>
+              </li>
+            </ul>
+          </div>
+        </section>
         <section class="subscribe-container subscribe-catalog" data-test="subscribe">
           <div class="subscribe-content">
             <h3 class="discription">Подпишитесь на рассылку</h3>
