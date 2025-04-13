@@ -102,13 +102,22 @@
                     <label class="visually-hidden" for="cost-input-min">цена от</label>
                     <input class="cost-input-min" type="number" name="cost-input-min" value="0" id="cost-input-min"
                       min="0">
+                    <span class="input-placeholder input-placeholder-min">от</span>
 
                     <label class="visually-hidden" for="cost-input-max">цена до</label>
                     <input class="cost-input-max" type="number" name="cost-input-max" value="9000" id="cost-input-max"
                       max="9000">
-
+                    <span class="input-placeholder input-placeholder-max">до</span>
                   </div>
-                  <span class="slider">слайдер</span>
+              <!--Slider-->
+                  <div class="slider">
+                    <div class="progress"></div>
+                  </div>
+                  <div class="range-input">
+                    <input type="range" class="range-min" min="0" max="10000" value="0" step="100">
+                    <input type="range" class="range-max" min="0" max="11000" value="9000" step="100">
+                  </div>
+
                 </fieldset>
                 <fieldset class="catalog-filter-buttons">
                   <button class="button filter-submit-btn" type="submit">Применить</button>
