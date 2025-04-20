@@ -3,10 +3,11 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Добро пожаловать в Седону</title>
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link href="css/style.css" rel="stylesheet">
+    <!--<link href="css/outlines.css" rel="stylesheet">-->
   </head>
 
   <body class="page-body">
@@ -17,26 +18,24 @@
             <a href="index.html"><img class="logo" src="img/logo.svg" width="140px" height="70px"
                 alt="логотип с надписью City of Sedona"></a>
             <ul class="navigation-menu">
-              <li class="navigation-item"><a class="navigation-link" href="index.html">Главная</a>
-                <!--<span class="active-indicator"></span>-->
-              </li>
+              <li class="navigation-item"><a class="navigation-link navigation-link-current" href="index.html">Главная</a></li>
               <li class="navigation-item"><a class="navigation-link" href="about.html">О Седоне</a></li>
               <li class="navigation-item"><a class="navigation-link" href="catalog.html">Гостиницы</a></li>
             </ul>
+            <!--<div class="active-indicator"></div>-->
           </nav>
 
           <nav class="navigation-right">
             <ul class="navigation-buttons">
-              <li class="navigation-item-icon"><a class="navigation-link" href="#"><span
-                    class="icon-button search-button"></span><span class="visually-hidden">Поиск</span></a></li>
-              <li class="navigation-item-icon"><a class="navigation-link" href="#"><span
-                    class="icon-button favorites-button"></span><span class="visually-hidden">Избранное</span>
-                  <!--<div class="badge">
-                    <span class="badge-bg"></span>
-                    <span class="fav_num">12</span>-->
-            </ul></a></li>
-            <a class="button hotel-search-btn" href="catalog.html">Хочу сюда!</a>
-
+              <li class="navigation-item-icon"><a class="navigation-link" href="#">
+                <span class="icon-button search-button"></span>
+                <span class="visually-hidden">Поиск</span></a></li>
+              <li class="navigation-item-icon"><a class="navigation-link" href="#">
+                <span class="icon-button favorites-button"></span>
+                <span class="visually-hidden">Избранное</span></a></li>
+            </ul>
+            <div class="badge">12</div>
+            <button class="button hotel-search-btn" href="#">Хочу сюда!</button>
           </nav>
         </div>
 
@@ -160,7 +159,7 @@
           <h2 class="visually-hidden">Мы с соцсетях</h2>
           <ul class="footer-social-list">
             <li class="footer-social-item">
-              <a class="socilal-media-button" href="https://vk.com/htmlacademy" target="_blank"
+              <a class="social-media-button" href="https://vk.com/htmlacademy" target="_blank"
                 rel="noreferrer noopener">
                 <span class="visually-hidden">ВКонтакте</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="14" fill="none" role="img"

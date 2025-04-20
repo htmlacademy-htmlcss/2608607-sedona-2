@@ -7,6 +7,7 @@
     <title>Гостиницы Седоны</title>
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link href="css/style.css" rel="stylesheet">
+    <!--<link href="css/outlines.css" rel="stylesheet">-->
   </head>
 
   <body class="page-body">
@@ -17,12 +18,11 @@
             <a href="index.html"><img class="logo" src="img/logo.svg" width="140px" height="70px"
                 alt="логотип с надписью City of Sedona"></a>
             <ul class="navigation-menu">
-              <li class="navigation-item"><a class="navigation-link" href="index.html">Главная</a>
-                <!--<span class="active-indicator"></span>-->
-              </li>
+              <li class="navigation-item"><a class="navigation-link" href="index.html">Главная</a></li>
               <li class="navigation-item"><a class="navigation-link" href="about.html">О Седоне</a></li>
               <li class="navigation-item"><a class="navigation-link" href="catalog.html">Гостиницы</a></li>
             </ul>
+            <div class="active-indicator"></div>
           </nav>
 
           <nav class="navigation-right">
@@ -30,13 +30,10 @@
               <li class="navigation-item-icon"><a class="navigation-link" href="#"><span
                     class="icon-button search-button"></span><span class="visually-hidden">Поиск</span></a></li>
               <li class="navigation-item-icon"><a class="navigation-link" href="#"><span
-                    class="icon-button favorites-button"></span><span class="visually-hidden">Избранное</span>
-                  <!--<div class="badge">
-                            <span class="badge-bg"></span>
-                            <span class="fav_num">12</span>-->
-            </ul></a></li>
-            <a class="button hotel-search-btn" href="catalog.html">Хочу сюда!</a>
-
+                    class="icon-button favorites-button"></span><span class="visually-hidden">Избранное</span></a></li>
+            </ul>
+            <div class="badge">12</div>
+            <button class="button hotel-search-btn" href="#">Хочу сюда!</button>
           </nav>
         </div>
 
@@ -52,7 +49,6 @@
                   <a class="breadcrumbs-link" href="index.html"><img src="img/home.svg" width="12px" height="12px"
                       alt="Главная"></a>
                 </li>
-                <li class="breadcrumbs-item">&gt;</li>
                 <li class="breadcrumbs-item">
                   <a class="breadcrumbs-link">Гостиницы</a>
                 </li>
@@ -109,13 +105,20 @@
                       max="9000">
                     <span class="input-placeholder input-placeholder-max">до</span>
                   </div>
-              <!--Slider-->
+                  <!--Slider-->
                   <div class="slider">
-                    <div class="progress"></div>
-                  </div>
-                  <div class="range-input">
-                    <input type="range" class="range-min" min="0" max="10000" value="0" step="100">
-                    <input type="range" class="range-max" min="0" max="11000" value="9000" step="100">
+                    <div class="range-toggle-scale">
+                      <div class="range-toggle-bar">
+                        <button class="range-toggle toggle-min" type="button">
+                          <span class="visually-hidden">Минимальная цена</span>
+                        </button>
+                        <button class="range-toggle toggle-max" type="button">
+                          <span class="visually-hidden">Максимальная цена</span>
+                        </button>
+                      </div>
+
+                    </div>
+
                   </div>
 
                 </fieldset>

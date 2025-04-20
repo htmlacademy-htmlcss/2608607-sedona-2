@@ -1,0 +1,162 @@
+.navigation-full {
+  outline: solid 3px red;
+}
+
+.navigation-left {
+  outline: solid 6px green;
+}
+
+.navigation-menu {
+  outline: solid 3px brown;
+}
+
+.navigation-item {
+  outline: solid 3px rgb(168, 158, 235);
+}
+.active-indicator {
+  outline: 3px solid orange;
+}
+
+.navigation-item .navigation-link {
+  outline: solid 3px yellow;
+}
+
+.navigation-right {
+  outline: solid 3px green;
+}
+
+.navigation-buttons {
+outline: solid 3px rgb(5, 5, 5);
+}
+
+.navigation-item-icon {
+ outline: solid 3px orange;
+}
+
+.navigation-buttons .navigation-link {
+outline: solid 3px lightblue;
+}
+
+.footer-container {
+  outline: solid 3px violet;
+}
+
+.footer-social-list {
+outline: solid 3px lightblue;
+}
+
+.footer-social-item {
+outline: solid 3px rgb(168, 158, 235);
+}
+
+address {
+outline: solid 3px lightgray;
+}
+
+.footer-logo-link {
+  outline: solid 3px pink;
+}
+
+.discription-container {
+  outline: solid 3px navy;
+}
+
+.discription {
+  outline: solid 3px magenta;
+}
+
+.discription-container .reasons {
+  outline: solid 3px cyan;
+}
+
+.advantages-item-wrapper {
+  outline: 3px solid coral;
+}
+
+.advantages-content-wrapper {
+  outline: solid 3px blue;
+}
+
+.advantages-title {
+  outline: solid 3px silver;
+}
+
+.invitation-container {
+  outline: solid 3px navy;
+}
+
+.invitation-container .reasons {
+  outline: solid 3px cyan;
+}
+
+.features-item-wrapper {
+  outline: solid 3px chartreuse;
+}
+
+.search-prompt-content {
+  outline: solid 3px orange;
+}
+
+.search-prompt-content .reasons {
+  outline: solid 3px cyan;
+}
+
+.subscribe-container {
+  outline: 3px solid yellow;
+}
+
+.catalog-filter-wrapper {
+  outline: 3px solid pink;
+}
+
+.inner-header {
+  outline: 3px solid gold;
+}
+
+.catalog-filter {
+  outline: 3px solid blueviolet;
+}
+
+.catalog-forms {
+  outline: 3px dashed red;
+}
+
+.catalog-filter-checkbox {
+  outline: 3px solid greenyellow;
+}
+
+.catalog-filter-radio {
+  outline: 3px solid greenyellow;
+}
+
+.catalog-filter-range {
+  outline: 3px solid greenyellow;
+}
+
+.input-area {
+  outline: 3px solid coral;
+}
+
+.catalog-filter-buttons {
+  outline: 3px solid greenyellow;
+}
+
+.catalog-showcase {
+  outline: 3px solid turquoise;
+}
+
+.catalog-showcase-header {
+  outline: 3px solid yellowgreen;
+}
+
+.location-card {
+  outline: 3px solid lightcoral;
+}
+
+.pagination-container {
+  outline: 3px solid yellowgreen;
+}
+
+.subscribe-content .reasons {
+  outline: solid 3px cyan;
+}

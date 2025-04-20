@@ -81,22 +81,21 @@ body {
   max-width: 1060px;
   justify-content: space-between;
   flex-grow: 1;
-  outline: solid 3px red;
+
 }
 
 .navigation-left {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
   min-width: 507px;
   margin-right: 2%;
   ;
-  outline: solid 6px green;
-
 }
 
 .logo {
+  position: absolute;
+  z-index: 1;
   margin-right: 30px;
 }
 
@@ -106,33 +105,37 @@ body {
   list-style: none;
   align-items: center;
   justify-content: space-evenly;
-  outline: solid 3px brown;
 
 }
 
 .navigation-item {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  outline: solid 3px rgb(168, 158, 235);
 
 }
 
 .navigation-item .navigation-link {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  padding: 0 16px;
+  padding: 10px 16px;
   box-sizing: border-box;
   color: inherit;
   font-weight: 700;
   text-decoration: none;
   font-size: 20px;
   line-height: 24px;
-  min-height: 64px;
-  outline: solid 3px yellow;
+}
 
+.navigation-link-current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  background-color: #756257;
+  height: 2px;
+  position: relative;
+  bottom: -21px;
+  z-index: 2;
 }
 
 .navigation-right {
@@ -142,7 +145,6 @@ body {
   justify-content: space-between;
   margin-left: auto;
   min-width: 268px;
-  outline: solid 3px green;
 }
 
 .navigation-buttons {
@@ -152,14 +154,12 @@ body {
   align-items: center;
   list-style: none;
   margin-right: 10px;
-  outline: solid 3px rgb(5, 5, 5);
 }
 
 .navigation-item-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  outline: solid 3px orange;
 }
 
 .navigation-buttons .navigation-link {
@@ -171,18 +171,16 @@ body {
   align-items: center;
   box-sizing: border-box;
   color: inherit;
-  outline: solid 3px lightblue;
 }
 
-/*.active-indicator {
-  display: block;
+.active-indicator {
+  position: absolute;
+  top: 64px;
+  left: 255px;
   width: 68px;
   height: 2px;
   background-color: #756257;
-  position: relative;
-  bottom: 2px;
-  left: 16px;
-}*/
+}
 
 
 .icon-button {
@@ -206,29 +204,19 @@ body {
   cursor: pointer;
 }
 
-/*.badge {
-  position: absolute;
-  right: 25px;
-  top: 12px;
-}
-.badge-bg {
+.badge {
+  position: relative;
+  right: 34px;
+  top: -12px;
   width: 20px;
   height: 20px;
-  border-radius: 10px;
+  border-radius: 50%;
   background-color: #7db54f;
-  position: absolute;
-  left: 24px;
-}
-.fav_num {
-  position: absolute;
-  left: 28px;
-  top: 6px;
   color: #fff;
-  font-family: "PT Sans", sans-serif;
   font-size: 10px;
-  line-height: 10px;
-  text-align: center;
-}*/
+  line-height: 20px;
+}
+
 .button {
   display: flex;
   flex-wrap: wrap;
@@ -260,7 +248,6 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(255, 255, 255);
-  outline: solid 3px violet;
 }
 
 .footer-social-list {
@@ -271,14 +258,12 @@ body {
   justify-content: space-between;
   margin-left: 70px;
   gap: 10px;
-  outline: solid 3px lightblue;
 }
 
 .footer-social-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  outline: solid 3px rgb(168, 158, 235);
 
 }
 
@@ -294,8 +279,6 @@ address {
   align-items: center;
   max-width: 720px;
   min-height: 50px;
-  outline: solid 3px lightgray;
-
 }
 
 .tel {
@@ -310,8 +293,6 @@ address {
 .footer-logo-link {
   text-decoration: none;
   padding: 10px;
-  outline: solid 3px pink;
-
 }
 
 .footer-logo {
@@ -329,7 +310,7 @@ address {
   background-repeat: no-repeat, no-repeat;
   background-position: bottom, center;
   height: 485px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(131, 179, 211, 20%);
   padding: 0;
 }
 
@@ -349,10 +330,9 @@ address {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  min-height: 261px;
+  min-height: 260px;
   justify-content: center;
   align-items: center;
-  outline: solid 3px navy;
 }
 
 .discription {
@@ -362,13 +342,11 @@ address {
   line-height: 36px;
   text-transform: uppercase;
   margin-bottom: 25px;
-  outline: solid 3px magenta;
 }
 
 .discription-container .reasons {
   line-height: 26px;
   text-transform: none;
-  outline: solid 3px cyan;
 }
 
 /*блок карточек с преимуществами*/
@@ -421,7 +399,6 @@ address {
   width: 400px;
   min-height: 385px;
   overflow: auto;
-  outline: 3px solid coral;
 }
 
 .advantages-content-wrapper {
@@ -431,7 +408,6 @@ address {
   align-items: center;
   width: 230px;
   margin: auto;
-  outline: solid 3px blue;
 }
 
 
@@ -450,7 +426,6 @@ address {
   line-height: 28px;
   text-transform: uppercase;
   padding-bottom: 30px;
-  outline: solid 3px silver;
 }
 
 .advantages-item-long .advantages-title::after {
@@ -491,18 +466,11 @@ address {
   min-height: 261px;
   justify-content: center;
   align-items: center;
-  outline: solid 3px navy;
 }
 
 .invitation-container .discription {
   max-width: 505px;
 }
-
-.invitation-container .reasons {
-  outline: solid 3px cyan;
-}
-
-
 
 /*блок особенностей*/
 .features-list {
@@ -533,7 +501,6 @@ address {
   min-height: 223px;
   background-repeat: no-repeat;
   background-position: 50% 0;
-  outline: solid 3px chartreuse;
 }
 
 .features-item:first-child .features-item-wrapper {
@@ -585,7 +552,6 @@ address {
   box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
-  outline: solid 3px orange
 }
 
 .search-prompt-content .discription {
@@ -596,7 +562,6 @@ address {
 .search-prompt-content .reasons {
   margin: 0;
   padding-bottom: 20px;
-  outline: solid 3px cyan;
 }
 
 .hotel-search-btn-long {
@@ -623,7 +588,6 @@ address {
   align-items: center;
   justify-content: center;
   color: rgb(255, 255, 255);
-  outline: 3px solid yellow;
 }
 
 .subscribe-content {
@@ -646,7 +610,6 @@ address {
   width: 475px;
   margin: 0;
   padding-bottom: 52px;
-  border: solid 3px cyan;
 }
 
 .subscribe-catalog {
@@ -722,12 +685,10 @@ address {
   margin-top: 35px;
 
   justify-content: space-between;
-  outline: 3px solid pink;
 }
 
 .inner-header {
   height: 107px;
-  outline: 3px solid gold;
 }
 
 .filter-header {
@@ -746,17 +707,20 @@ address {
   list-style: none;
 }
 
+.breadcrumbs-item:not(:first-child)::before {
+  content: ">";
+  padding-right: 5px;
+}
+
 .catalog-filter {
   font-size: 20px;
   line-height: 33px;
   height: 160px;
-  outline: 3px solid blueviolet;
 }
 
 .catalog-forms {
   display: flex;
   justify-content: space-between;
-  outline: 3px dashed red;
 }
 
 .catalog-filter-checkbox {
@@ -764,8 +728,6 @@ address {
   text-align: left;
   border: none;
   margin-right: 70px;
-
-  outline: 3px solid greenyellow;
 
 }
 
@@ -784,7 +746,6 @@ address {
   text-align: left;
   border: none;
   margin-right: auto;
-  outline: 3px solid greenyellow;
 }
 
 .catalog-filter-range {
@@ -792,14 +753,13 @@ address {
   border: none;
   margin-right: 70px;
 
-  outline: 3px solid greenyellow;
 }
 
 .input-area {
   display: grid;
   grid-template-columns: min-content min-content min-content min-content;
   width: 288px;
-  outline: 3px solid coral;
+  justify-content: center;
 }
 
 
@@ -853,34 +813,39 @@ address {
 }
 
 .slider {
-  height: 5px;
+  display: block;
   position: relative;
   top: 20px;
-  background: #756157;
+
 }
 
-.slider .progress {
-  height: 100%;
-  left: 25%;
-  right: 25%;
-  position: absolute;
-  background: #756157;
-}
-
-.range-input {
+.range-toggle-scale {
+  background-color: rgba(255, 255, 255, 0.3);
   position: relative;
-  top: 20px;
-  right: 150px;
-  background: #ffffff;
+  height: 4px;
+  top: 8px;
 }
 
-.range-input input {
+.range-toggle-bar {
   position: absolute;
-  width: 100%;
-  height: 5px;
-  top: -5px;
-  background: none;
-  pointer-events: none;
+  height: 4px;
+  width: 200px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range-toggle {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.range-toggle.toggle-max {
+  transform: translateX(50%);
 }
 
 .catalog-filter-buttons {
@@ -891,7 +856,6 @@ address {
   border: none;
   align-self: flex-end;
   justify-content: space-between;
-  outline: 3px solid greenyellow;
 }
 
 .filter-submit-btn {
@@ -934,7 +898,6 @@ address {
   flex-direction: column;
   width: 1060px;
   margin: 0 auto;
-  outline: 3px solid turquoise;
 }
 
 .catalog-showcase-header {
@@ -944,8 +907,6 @@ address {
   margin-bottom: 40px;
   justify-content: flex-end;
   align-items: center;
-  outline: 3px solid yellowgreen;
-
 }
 
 .catalog-showcase-heading {
@@ -1022,16 +983,6 @@ address {
 
 }
 
-/* ЛИНИЯ-РАЗДЕЛИТЕЛЬ
-.pagination::before {
-  content: "";
-  height: 1px;
-  width: 100%;
-  background-color: #E5E5E5;
-  margin-top: 50px;
-  margin-bottom: 50px;
- }
- */
 .location-card {
   display: grid;
   width: 340px;
@@ -1043,7 +994,6 @@ address {
   gap: 16px 0;
   border: 1px solid rgb(229, 229, 229);
   border-radius: 4px;
-  outline: 3px solid lightcoral
 }
 
 .location-card-link {
@@ -1197,8 +1147,6 @@ address {
   width: 1060px;
   margin-bottom: 40px;
   justify-content: flex-start;
-  outline: 3px solid yellowgreen;
-
 }
 
 .pagination {
@@ -1206,8 +1154,16 @@ address {
   flex-wrap: wrap;
   gap: 8px;
   list-style-type: none;
-
   background-color: rgb(255, 255, 255);
+}
+
+.pagination:before {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #E5E5E5;
+  margin-bottom: 40px;
 }
 
 .pagination-item {
