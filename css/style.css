@@ -34,8 +34,8 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  color: rgb(0, 0, 0);
-  background-color: rgb(242, 242, 242);
+  color: #000000;
+  background-color: #f2f2f2;
 
 }
 
@@ -43,8 +43,8 @@ body {
   width: 1200px;
   margin: 0 auto;
   position: relative;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 20%);
 }
 
 .visually-hidden {
@@ -147,6 +147,8 @@ body {
   min-width: 268px;
 }
 
+.navigation-icon {}
+
 .navigation-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -171,6 +173,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   color: inherit;
+  text-decoration: none;
 }
 
 .active-indicator {
@@ -206,7 +209,7 @@ body {
 
 .badge {
   position: relative;
-  right: 34px;
+  right: 12px;
   top: -12px;
   width: 20px;
   height: 20px;
@@ -217,7 +220,7 @@ body {
   line-height: 20px;
 }
 
-.button {
+.button-brown {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -231,6 +234,15 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.button-brown:hover,
+.button-brown:focus {
+  background-color: #615048;
+}
+
+.button-brown:active {
+  opacity: 30%;
 }
 
 .hotel-search-btn {
@@ -247,7 +259,7 @@ body {
   min-height: 120px;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 .footer-social-list {
@@ -272,6 +284,15 @@ body {
   padding: 10px;
 }
 
+.socilal-media-button:hover svg path {
+  fill: #68A2CA;
+}
+
+.socilal-media-button:active svg path {
+  fill: #68A2CA;
+  opacity: 30%;
+}
+
 address {
   display: flex;
   text-wrap: wrap;
@@ -281,13 +302,23 @@ address {
   min-height: 50px;
 }
 
-.tel {
+a[href^="tel:"] {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #000000;
   font-size: 40px;
   font-weight: 400;
   font-style: normal;
   line-height: 40px;
+}
+
+.contacts .tel:hover,
+.contacts .tel:focus {
+  color: #756157;
+}
+
+.contacts .tel:active {
+  color: #756157;
+  opacity: 30%;
 }
 
 .footer-logo-link {
@@ -297,6 +328,16 @@ address {
 
 .footer-logo {
   padding-right: 60px;
+}
+
+.footer-logo-link:hover svg path,
+.footer-logo-link:focus svg path {
+  fill: #756157;
+}
+
+.footer-logo-link:active svg path {
+  color: #756157;
+  opacity: 30%;
 }
 
 /*index-main*/
@@ -376,7 +417,7 @@ address {
 
 .advantages-item-long {
   min-width: 100%;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .advantages-item-short {
@@ -386,8 +427,8 @@ address {
 
 .advantages-item:first-child,
 .advantages-item:last-child {
-  background-color: rgba(130, 179, 211, 1);
-  color: rgb(255, 255, 255);
+  background-color: #88B3D3;
+  color: #ffffff;
 }
 
 .advantages-item:nth-child(3) {
@@ -516,7 +557,7 @@ address {
 }
 
 .features-item:nth-child(2n) {
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 .features-item .advantages-title {
@@ -582,12 +623,12 @@ address {
   background-image: url("../img/bg-subscribe-blur.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   padding: 0;
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .subscribe-content {
@@ -629,10 +670,10 @@ address {
   min-width: 232px;
   flex-basis: 452px;
   min-height: 52px;
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
   border-width: 0;
   border-radius: 4px 0 0 4px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -645,10 +686,10 @@ address {
 .button-subscribe {
   max-width: 232px;
   min-width: fit-content;
-  background-color: rgba(130, 179, 211, 1);
+  background-color: #82b3d3;
   border: 0;
   border-radius: 0 4px 4px 0;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
@@ -673,7 +714,7 @@ address {
   width: auto;
   align-items: center;
   margin-bottom: 50px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 
 }
 
@@ -705,6 +746,11 @@ address {
   font-size: 16px;
   line-height: 21px;
   list-style: none;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .breadcrumbs-item:not(:first-child)::before {
@@ -767,10 +813,10 @@ address {
   margin: 0 auto;
   max-width: 72px;
   min-height: 48px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   border-width: 0;
   border-radius: 4px 0 0 4px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -783,9 +829,9 @@ address {
   margin: 0 auto;
   max-width: 72px;
   min-height: 48px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   border-width: 0;
-  color: rgb(0, 0, 0);
+  color: #000000;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -797,7 +843,7 @@ address {
 .input-placeholder {
   width: 48px;
   height: 48px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   color: #000000;
   align-content: center;
   font-size: 18px;
@@ -820,7 +866,7 @@ address {
 }
 
 .range-toggle-scale {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 30%);
   position: relative;
   height: 4px;
   top: 8px;
@@ -863,9 +909,9 @@ address {
   margin: 0 auto;
   width: 191px;
   height: 36px;
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
   border-radius: 4px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -873,6 +919,7 @@ address {
   align-self: center;
   text-decoration: none;
   text-transform: uppercase;
+  border: none;
 }
 
 .button-reset-btn {
@@ -880,9 +927,9 @@ address {
   margin-bottom: 10px;
   width: 191px;
   height: 36px;
-  background-color: rgba(130, 178, 211, 0);
+  background-color: #82b2d300;
   border-radius: 4px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -890,6 +937,7 @@ address {
   align-self: center;
   text-decoration: none;
   text-transform: uppercase;
+  border: none;
 }
 
 /*filter output controls*/
@@ -919,7 +967,7 @@ address {
   height: 49px;
   border-width: 2px;
   border-radius: 4px;
-  border-color: rgb(229, 229, 229);
+  border-color: #e5e5e5;
   font-size: 18px;
   padding: 0 20px;
   margin-right: 70px;
@@ -934,13 +982,13 @@ address {
 .icon-tiles-view {
   width: 48px;
   height: 48px;
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid #000000;
   border-radius: 4px;
   margin-right: 8px;
   background-image: url("../img/icon-view-table.svg");
   background-repeat: no-repeat;
   background-position: center;
-
+  box-sizing: border-box;
 }
 
 .icon-single-view {
@@ -951,7 +999,7 @@ address {
   background-image: url("../img/icon-view-slideshow.png");
   background-repeat: no-repeat;
   background-position: center;
-  border: 2px solid rgb(229, 229, 229);
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
 }
 
@@ -962,13 +1010,13 @@ address {
   background-image: url("../img/icon-view-list.png");
   background-repeat: no-repeat;
   background-position: center;
-  border: 2px solid rgb(229, 229, 229);
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
 }
 
 .view-type:hover {
   border-style: solid;
-  border-color: rgba(0, 0, 0, );
+  border-color: #000000;
   border-width: 2px;
   border-radius: 4px;
 }
@@ -992,7 +1040,7 @@ address {
   grid-template-columns: 1fr 20px 1fr;
   grid-template-rows: min-content min-content min-content min-content min-content;
   gap: 16px 0;
-  border: 1px solid rgb(229, 229, 229);
+  border: 1px solid #e5e5e5;
   border-radius: 4px;
 }
 
@@ -1003,7 +1051,7 @@ address {
   text-decoration: none;
   grid-column: 1 / -1;
   grid-row: 1;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .location-card-image {
@@ -1052,9 +1100,9 @@ address {
   width: 140px;
   height: 36px;
   box-sizing: border-box;
-  background-color: rgb(117, 97, 87);
+  background-color: #756157;
   border-radius: 4px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -1071,9 +1119,9 @@ address {
   display: inline-block;
   width: 140px;
   height: 36px;
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
   border-radius: 4px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -1089,9 +1137,9 @@ address {
   margin: 0 auto;
   width: 140px;
   height: 36px;
-  background-color: rgba(125, 181, 79);
+  background-color: #7db54f;
   border-radius: 4px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -1130,9 +1178,9 @@ address {
 
   width: 140px;
   height: 37px;
-  background-color: rgb(242, 242, 242);
+  background-color: #f2f2f2;
   border-radius: 4px;
-  color: rgb(51, 51, 51);
+  color: #333333;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -1154,7 +1202,7 @@ address {
   flex-wrap: wrap;
   gap: 8px;
   list-style-type: none;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 .pagination:before {
@@ -1179,19 +1227,39 @@ address {
   width: 60px;
   height: 60px;
   padding: 16px 12px;
-  background-color: rgb(130, 179, 211);
-  color: rgb(255, 255, 255);
+  background-color: #82b3d3;
+  color: #ffffff;
   font-size: 20px;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.pagination-link:hover,
+.pagination-link:focus,
+.pagination-link:active {
+  background-color: #68A2CA;
+  border: 1px solid #82B3D3;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination-link:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-current {
-  background-color: rgb(242, 242, 242);
-  color: rgb(0, 0, 0);
+  background-color: #f2f2f2;
+  color: #000000;
   font-weight: 700;
 }
 
+.pagination-current:hover,
+.pagination-next:hover {
+  background-color: #f2f2f2;
+  border: none;
+  color: #000000;
+}
+
 .pagination-next {
-  background-color: rgb(253, 253, 253);
-  color: rgb(0, 0, 0)
+  background-color: #fdfdfd;
+  color: #000000;
 }
