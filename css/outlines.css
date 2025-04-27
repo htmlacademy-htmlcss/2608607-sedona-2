@@ -160,3 +160,6 @@ outline: solid 3px lightgray;
 .subscribe-content .reasons {
   outline: solid 3px cyan;
 }
+.breadcrumbs {
+outline: 3px solid olive;
+}
