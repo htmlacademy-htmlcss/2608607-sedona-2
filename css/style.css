@@ -870,13 +870,15 @@ border-radius: 4px;
 .control-input[type="checkbox"]:checked + .control-mark::before,
 .control-input[type="checkbox"]:checked + .control-mark::after {
 position: absolute;
-content: "✓";
-color: #3F5E72;
+content: "";
+background-image: url("../img/checkmark.svg");
+background-repeat: no-repeat;
+background-position: center;
 font-weight: 700;
-width: 12px;
+width: 13px;
 height: 10px;
-top: -6px;
-right: 5px;
+top: 6px;
+right: 3px;
 }
 .control:hover .control-mark {
   opacity: 60%;
@@ -897,7 +899,6 @@ position: absolute;
     left: 4.5px;
     width: 11px;
     height: 11px;
-    background-color: #242424;
     border-radius: 50%;
     content: "";
     background-color: #3F5E72;
@@ -1148,13 +1149,14 @@ border-radius: 4px;
 }
 
 
-.icon-tiles-view {
+.icon-tiles-view.view-type {
   width: 48px;
   height: 48px;
   background-image: url("../img/icon-view-table.svg");
   background-repeat: no-repeat;
   background-position: center;
   box-sizing: border-box;
+  border: 2px solid #000000;
 }
 
 .icon-single-view {
