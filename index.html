@@ -15,8 +15,7 @@
       <header class="header-main" data-test="header">
         <div class="navigation-full">
           <nav class="navigation-left">
-            <a href="index.html"><img class="logo" src="img/logo.svg" width="140px" height="70px"
-                alt="логотип с надписью City of Sedona"></a>
+            <a href="index.html"><img class="logo" src="img/logo.svg" width="140px" height="70px" alt="логотип с надписью City of Sedona"></a>
             <ul class="navigation-menu">
               <li class="navigation-item"><a class="navigation-link navigation-link-current"
                   href="index.html">Главная</a></li>
@@ -28,15 +27,13 @@
           <nav class="navigation-right">
             <ul class="navigation-buttons">
               <li class="navigation-item-icon"><a class="navigation-link" href="#">
-                  <svg class="navigation-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
-                    width="20" height="20" fill="none" viewBox="0 0 20 20">
+                  <svg class="navigation-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="20" height="20" fill="none" viewBox="0 0 20 20">
                     <path fill="#000"
                       d="m19.5 18.008-3.7-3.68c1-1.292 1.7-2.983 1.7-4.872 0-4.376-3.6-7.956-8-7.956s-8 3.68-8 8.055c0 4.376 3.6 7.956 8 7.956 1.8 0 3.5-.597 4.9-1.69l3.7 3.679 1.4-1.492Zm-10-2.486c-3.3 0-6-2.685-6-5.967 0-3.282 2.7-5.967 6-5.967s6 2.685 6 5.967c0 3.282-2.7 5.967-6 5.967Z" />
                   </svg>
                   <span class="visually-hidden">Поиск</span></a></li>
               <li class="navigation-item-icon"><a class="navigation-link" href="#">
-                  <svg class="navigation-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
-                    width="20" height="20" fill="none" viewBox="0 0 20 20">
+                  <svg class="navigation-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="20" height="20" fill="none" viewBox="0 0 20 20">
                     <path fill="#000"
                       d="M9.9 19c-.3 0-.6-.1-.8-.4-5.4-6.1-6.7-7.5-7-7.9C1.4 9.8 1 8.6 1 7.4 1 4.4 3.4 2 6.5 2 7.8 2 9 2.5 10 3.3c1-.8 2.3-1.3 3.5-1.3 3 0 5.5 2.4 5.5 5.4 0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" />
                   </svg>
@@ -44,7 +41,8 @@
                   <span class="badge">12</span></a></li>
             </ul>
 
-            <button class="button-brown hotel-search-btn" type="button">Хочу сюда!</button>
+            <button class="button-brown hotel-search-btn" type="button" onclick="window['dialog-main'].showModal()"
+              aria-controls="dialog-main">Хочу сюда!</button>
           </nav>
         </div>
 
@@ -53,8 +51,7 @@
       <main class="main-index main-container" data-test="main">
         <section class="welcome" data-test="hero">
           <h1 class="visually-hidden">Приглашение посетить Седону</h1>
-          <img class="welcome-text" src="img/welcome.svg" width="458px" height="352px"
-            alt="Welcome to gorgeus Sedona. Because the Grand Canyon sucks!">
+          <img class="welcome-text" src="img/welcome.svg" width="458px" height="352px" alt="Welcome to gorgeus Sedona. Because the Grand Canyon sucks!">
         </section>
 
         <section class="main-discription" data-test="advantages">
@@ -99,8 +96,7 @@
               </div>
             </li>
             <li class="advantages-item advantages-item-long">
-              <img class="content-image" src="img/photo-2.jpg" width="800px" height="385px"
-                alt="вид на каньон и красные скалы">
+              <img class="content-image" src="img/photo-2.jpg" width="800px" height="385px" alt="вид на каньон и красные скалы">
               <div class="advantages-item-wrapper">
                 <div class="advantages-content-wrapper">
                   <h3 class="advantages-title ">Там есть мост дьявола</h3>
@@ -145,7 +141,9 @@
               <p class="reasons">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в
                 Седоне
               </p>
-              <button class="button-brown hotel-search-btn-long" type="button">поиск гостиницы в Cедоне</button>
+              <button class="button-brown hotel-search-btn-long" type="button"
+                onclick="window['dialog-main'].showModal()" aria-controls="dialog-main">поиск гостиницы в
+                Cедоне</button>
             </div>
           </section>
         </section>
@@ -171,8 +169,8 @@
               <a class="social-media-button" href="https://vk.com/htmlacademy" target="_blank"
                 rel="noreferrer noopener">
                 <span class="visually-hidden">ВКонтакте</span>
-                <svg class="social-media-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="14" fill="none" viewBox="0 0 24 14"
-                  aria-label="vk logo">
+                <svg class="social-media-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="14" fill="none"
+                  viewBox="0 0 24 14" aria-label="vk logo">
                   <path
                     d="M23.45.948c.166-.546 0-.948-.795-.948H20.03c-.668 0-.976.347-1.143.73 0 0-1.335 3.196-3.226 5.272-.612.602-.89.793-1.224.793-.167 0-.418-.191-.418-.738V.948c0-.656-.184-.948-.74-.948H9.151c-.417 0-.668.304-.668.593 0 .621.946.765 1.043 2.513v3.798c0 .833-.153.984-.487.984-.89 0-3.055-3.211-4.34-6.885C4.45.288 4.198 0 3.527 0H.9C.15 0 0 .347 0 .73c0 .682.89 4.07 4.145 8.551C6.315 12.341 9.37 14 12.153 14c1.669 0 1.875-.368 1.875-1.003v-2.313c0-.737.158-.884.687-.884.39 0 1.057.192 2.615 1.667C19.11 13.216 19.403 14 20.405 14h2.625c.75 0 1.126-.368.91-1.096-.238-.724-1.088-1.775-2.215-3.022-.612-.71-1.53-1.475-1.809-1.858-.389-.491-.278-.71 0-1.147 0 0 3.2-4.426 3.533-5.929h.001Z" />
                 </svg>
@@ -181,8 +179,8 @@
             <li class="footer-social-item">
               <a class="social-media-button" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
                 <span class="visually-hidden">Телеграм</span>
-                <svg class="social-media-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none" viewBox="0 0 18 16"
-                  aria-label="telegram logo">
+                <svg class="social-media-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none"
+                  viewBox="0 0 18 16" aria-label="telegram logo">
                   <path
                     d="M16.785.1.84 6.247C-.248 6.685-.24 7.292.64 7.563L4.735 8.84l9.472-5.976c.448-.273.857-.126.52.172L7.053 9.962H7.05h.002l-.283 4.22c.414 0 .597-.19.829-.413l1.988-1.934 4.136 3.055c.762.42 1.31.204 1.5-.706L17.938 1.39c.278-1.114-.425-1.619-1.153-1.29Z" />
                 </svg>
@@ -192,8 +190,8 @@
               <a class="social-media-button" href="https://www.youtube.com/user/htmlacademyru" target="_blank"
                 rel="noreferrer noopener">
                 <span class="visually-hidden">YouTube</span>
-                <svg class="social-media-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="17" fill="none" viewBox="0 0 22 17"
-                  aria-label="youtube logo">
+                <svg class="social-media-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="17" fill="none"
+                  viewBox="0 0 22 17" aria-label="youtube logo">
                   <path
                     d="M18.607 0H3.174C1.314 0 0 1.594 0 3.4v10.094C0 15.406 1.313 17 3.174 17h15.652C20.468 17 22 15.406 22 13.6V3.4C21.781 1.594 20.468 0 18.607 0ZM7.662 12.537V4.463L14.995 8.5l-7.333 4.037Z" />
                 </svg>
@@ -214,6 +212,69 @@
           </div>
         </div>
       </footer>
+      <dialog class="dialog-main" id="dialog-main" aria-label="Modal window" aria-labelledby="Поиск гостиницы в Седоне">
+        <span class="visually-hidden">Закрыть</span>
+        <button class="modal-close-button" aria-label="close dialog" formmethod="dialog"
+          onclick="document.getElementById('dialog-main').close()"></button>
+        <section class="modal-content">
+          <h2 class="dialog-main-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="dialog">
+            <p class="field-group">
+              <label class="modal-input-label" for="arrival-date">Дата Заезда:</label>
+              <input class="modal-field" type="text" id="arrival-date" name="arrival-date" placeholder="Укажите дату">
+              <span class="error-message">Мы не можем отправить вас в прошлое.</span>
+            </p>
+
+            <p class="field-group">
+              <label class="modal-input-label" for="departure-date">Дата Выезда:</label>
+              <input class="modal-field" type="text" id="departure-date" name="departure-date" placeholder="Укажите дату">
+              <span class="confirm-message">На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+            <div class="field-group">
+              <div class="modal-input-wrapper-left">
+                <label class="modal-input-label" for="adults">Взрослые:</label>
+                <div class="number-input-container">
+                  <button class="decrement-button" type="button" aria-label="Decrease number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                      <path fill="none" fill-opacity="none" d="M3 9v2h14V9H3Z" />
+                    </svg>
+                  </button>
+                  <input class="number-field" id="adults" type="number" aria-label="Number input" value="2">
+                  <button class="increment-button" type="button" aria-label="Increase number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                      <path fill="none" fill-opacity="none" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="modal-input-wrapper-right">
+                <label class="modal-input-label" for="children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-tip"></button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-tip">Укажите количество детей, которые
+                    будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+                <div class="number-input-container">
+                  <button class="decrement-button" type="button" aria-label="Decrease number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                      <path fill="none" d="M3 9v2h14V9H3Z" />
+                    </svg>
+                  </button>
+                  <input class="number-field" id="children" type="number" aria-label="Number input" value="2">
+                  <button class="increment-button" type="button" aria-label="Increase number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                      <path fill="none" fill-opacity="none" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="dialog-button button-blue" type="">Найти</button>
+          </form>
+        </section>
+
+
+      </dialog>
     </div>
   </body>
 

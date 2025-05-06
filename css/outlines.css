@@ -13,6 +13,7 @@
 .navigation-item {
   outline: solid 3px rgb(168, 158, 235);
 }
+
 .active-indicator {
   outline: 3px solid orange;
 }
@@ -26,15 +27,15 @@
 }
 
 .navigation-buttons {
-outline: solid 3px rgb(5, 5, 5);
+  outline: solid 3px rgb(5, 5, 5);
 }
 
 .navigation-item-icon {
- outline: solid 3px orange;
+  outline: solid 3px orange;
 }
 
 .navigation-buttons .navigation-link {
-outline: solid 3px lightblue;
+  outline: solid 3px lightblue;
 }
 
 .footer-container {
@@ -42,15 +43,15 @@ outline: solid 3px lightblue;
 }
 
 .footer-social-list {
-outline: solid 3px lightblue;
+  outline: solid 3px lightblue;
 }
 
 .footer-social-item {
-outline: solid 3px rgb(168, 158, 235);
+  outline: solid 3px rgb(168, 158, 235);
 }
 
 address {
-outline: solid 3px lightgray;
+  outline: solid 3px lightgray;
 }
 
 .footer-logo-link {
@@ -160,6 +161,43 @@ outline: solid 3px lightgray;
 .subscribe-content .reasons {
   outline: solid 3px cyan;
 }
+
 .breadcrumbs {
-outline: 3px solid olive;
+  outline: 3px solid olive;
+}
+
+.dialog-main {
+  outline: 3px solid red;
+}
+
+.modal-content {
+  outline: 3px solid orange;
+}
+
+.dialog-main-title {
+  outline: 3px solid yellow;
+}
+
+.search-form {
+  outline: 3px solid green;
+}
+
+.field-group {
+  outline: 3px solid lightblue;
+}
+
+.modal-input-label {
+  outline: 3px solid blue;
+}
+
+.modal-field {
+  outline: 3px solid violet;
+}
+
+.modal-input-wrapper-left {
+  outline: 3px solid lightgreen;
+}
+
+.number-of-guests {
+  outline: 3px solid pink;
 }

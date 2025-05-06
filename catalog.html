@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гостиницы Седоны</title>
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link href="css/style.css" rel="stylesheet">
@@ -17,11 +17,11 @@
             <a href="index.html"><img class="logo" src="img/logo.svg" width="140px" height="70px"
                 alt="логотип с надписью City of Sedona"></a>
             <ul class="navigation-menu">
-              <li class="navigation-item"><a class="navigation-link"
-                  href="index.html">Главная</a>
+              <li class="navigation-item"><a class="navigation-link" href="index.html">Главная</a>
               </li>
               <li class="navigation-item"><a class="navigation-link" href="about.html">О Седоне</a></li>
-              <li class="navigation-item"><a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a></li>
+              <li class="navigation-item"><a class="navigation-link navigation-link-current"
+                  href="catalog.html">Гостиницы</a></li>
             </ul>
           </nav>
 
@@ -44,7 +44,8 @@
                   <span class="badge">12</span></a></li>
             </ul>
 
-            <button class="button-brown hotel-search-btn" type="button">Хочу сюда!</button>
+            <button class="button-brown hotel-search-btn" type="button" onclick="window['dialog-main'].showModal()"
+              aria-controls="dialog-main">Хочу сюда!</button>
           </nav>
         </div>
 
@@ -58,7 +59,8 @@
               <ul class="breadcrumbs">
                 <li class="breadcrumbs-item">
                   <a class="breadcrumbs-link" href="index.html">
-                    <svg class="breadcrumbs-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none" viewBox="0 0 14 15">
+                    <svg class="breadcrumbs-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"
+                      viewBox="0 0 14 15">
                       <g fill="#fff" clip-path="url(#a)">
                         <path d="m7.371.5-6 5.8v6.2h12V6.3l-6-5.8Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z" />
                         <path d="M5.371 10.5h1V8h2v2.5h1V7h-4v3.5Z" />
@@ -138,12 +140,12 @@
                   <div class="input-area">
                     <label class="catalog-input-area" for="cost-input-min">
                       <input class="cost-input-min" type="number" name="cost-input-min" value="0" id="cost-input-min"
-                    min="0">
+                        min="0" oninput="if(this.value < this.min) this.value = this.min;">
                       <span class="cost-input-min-placeholder">от</span>
-                  </label>
+                    </label>
                     <label class="catalog-input-area" for="cost-input-max">
                       <input class="cost-input-max" type="number" name="cost-input-max" value="9000" id="cost-input-max"
-                      max="9000">
+                        max="9000">
                       <span class="cost-input-max-placeholder">до</span>
                     </label>
                   </div>
@@ -185,7 +187,7 @@
             <a class="icon-tiles" href="#">
               <span class="visually-hidden">Вид: плитки</span><span class="icon-tiles-view view-type"></span></a>
             <a class="icon-tiles" href="#">
-              <span class="visually-hidden">Вид: по одной</span><span class="icon-single-view view-type"></a>
+              <span class="visually-hidden">Вид: по одной</span><span class="icon-single-view view-type"></span></a>
             <a class="icon-tiles" href="#">
               <span class="visually-hidden">Вид: список</span><span class="icon-list-view view-type"></span></a>
           </header>
@@ -200,7 +202,7 @@
               <span class="location-type">Гостиница</span>
               <span class="location-price-from">От 4000 ₽</span>
               <a class="location-card-button button-brown" href="#">подробнее</a>
-              <a class="button-favorite button-blue" href="#">в избранное</a>
+              <button class="button-favorite button-blue" type="button">в избранное</button>
               <div class="star-rating">
                 <span class="star-rating-star"></span>
                 <span class="star-rating-star"></span>
@@ -218,7 +220,7 @@
               <span class="location-type">Гостиница</span>
               <span class="location-price-from">От 5000 ₽</span>
               <a class="location-card-button button-brown" href="#">подробнее</a>
-              <a class="button-favorite-active button-green" href="#">в избранном</a>
+              <button class="button-favorite-active button-green" type="button">в избранном</button>
               <div class="star-rating">
                 <span class="star-rating-star"></span>
                 <span class="star-rating-star"></span>
@@ -236,7 +238,7 @@
               <span class="location-type">Гостиница</span>
               <span class="location-price-from">От 2500 ₽</span>
               <a class="location-card-button button-brown" href="#">подробнее</a>
-              <a class="button-favorite button-blue" href="#">в избранное</a>
+              <button class="button-favorite button-blue" type="button">в избранное</button>
               <div class="star-rating">
                 <span class="star-rating-star"></span>
                 <span class="star-rating-star"></span>
@@ -253,7 +255,7 @@
               <span class="location-type">Гостиница</span>
               <span class="location-price-from">От 1500 ₽</span>
               <a class="location-card-button button-brown" href="#">подробнее</a>
-              <a class="button-favorite button-blue" href="#">в избранное</a>
+              <button class="button-favorite button-blue" type="button">в избранное</button>
               <div class="star-rating">
                 <span class="star-rating-star"></span>
                 <span class="star-rating-star"></span>
@@ -294,6 +296,8 @@
               <input class="field" type="email" id="submit-email" name="email" placeholder="Ваш e-mail">
               <button class="button-subscribe button-blue" type="submit">Подписаться</button>
             </form>
+          </div>
+        </section>
       </main>
 
       <footer class="page-footer" data-test="footer">
@@ -301,7 +305,8 @@
           <h2 class="visually-hidden">Мы с соцсетях</h2>
           <ul class="footer-social-list">
             <li class="footer-social-item">
-              <a class="social-media-button" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+              <a class="social-media-button" href="https://vk.com/htmlacademy" target="_blank"
+                rel="noreferrer noopener">
                 <span class="visually-hidden">ВКонтакте</span>
                 <svg class="social-media-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="14" fill="none"
                   viewBox="0 0 24 14" aria-label="vk logo">
@@ -346,6 +351,69 @@
           </div>
         </div>
       </footer>
+      <dialog class="dialog-main" id="dialog-main" aria-label="Modal window" aria-labelledby="Поиск гостиницы в Седоне">
+        <span class="visually-hidden">Закрыть</span>
+        <button class="modal-close-button" aria-label="close dialog" formmethod="dialog"
+          onclick="document.getElementById('dialog-main').close()"></button>
+        <section class="modal-content">
+          <h2 class="dialog-main-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="dialog">
+            <p class="field-group">
+              <label class="modal-input-label" for="arrival-date">Дата Заезда:</label>
+              <input class="modal-field" type="text" id="arrival-date" name="arrival-date" placeholder="Укажите дату">
+              <span class="error-message">Мы не можем отправить вас в прошлое.</span>
+            </p>
+
+            <p class="field-group">
+              <label class="modal-input-label" for="departure-date">Дата Выезда:</label>
+              <input class="modal-field" type="text" id="departure-date" name="departure-date" placeholder="Укажите дату">
+              <span class="confirm-message">На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+            <div class="field-group">
+              <div class="modal-input-wrapper-left">
+                <label class="modal-input-label" for="adults">Взрослые:</label>
+                <div class="number-input-container">
+                  <button class="decrement-button" aria-label="Decrease number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                      <path fill="none" fill-opacity="none" d="M3 9v2h14V9H3Z" />
+                    </svg>
+                  </button>
+                  <input class="number-field" id="adults" type="number" aria-label="Number input" value="2">
+                  <button class="increment-button" aria-label="Increase number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                      <path fill="none" fill-opacity="none" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="modal-input-wrapper-right">
+                <label class="modal-input-label" for="children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-tip"></button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-tip">Укажите количество детей, которые
+                    будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+                <div class="number-input-container">
+                  <button class="decrement-button" aria-label="Decrease number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                      <path fill="none" d="M3 9v2h14V9H3Z" />
+                    </svg>
+                  </button>
+                  <input class="number-field" id="children" type="number" aria-label="Number input" value="2">
+                  <button class="increment-button" aria-label="Increase number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
+                      <path fill="none" fill-opacity="none" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <button class="dialog-button button-blue" type="button">Найти</button>
+          </form>
+        </section>
+
+
+      </dialog>
     </div>
   </body>
 
