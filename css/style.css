@@ -238,7 +238,9 @@ body {
   bottom: -21px;
   z-index: 2;
 }
-
+.navigation-link-current::after:focus-visible {
+  outline: none;
+}
 .navigation-right {
   display: flex;
   flex-wrap: wrap;
