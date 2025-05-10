@@ -8,20 +8,19 @@
     <link rel="icon" href="favicon.png" type="image/x-icon">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  
+
   <body class="page-body">
     <div class="container">
       <header class="header-main" data-test="header">
         <div class="navigation-full">
           <nav class="navigation-left">
-            <a href="index.html"><img class="logo" src="img/logo.svg" width="140px" height="70px"
+            <a href="index.html"><img class="logo" src="img/logo.svg" width="140" height="70"
                 alt="логотип с надписью City of Sedona"></a>
             <ul class="navigation-menu">
-              <li class="navigation-item"><a class="navigation-link" href="index.html">Главная</a>
+              <li class="navigation-item"><a class="navigation-link navigation-link-main" href="index.html">Главная</a>
               </li>
               <li class="navigation-item"><a class="navigation-link" href="about.html">О Седоне</a></li>
-              <li class="navigation-item"><a class="navigation-link navigation-link-current"
-                  href="catalog.html">Гостиницы</a></li>
+              <li class="navigation-item"><a class="navigation-link" href="catalog.html">Гостиницы</a></li>
             </ul>
           </nav>
 
@@ -44,8 +43,7 @@
                   <span class="badge">12</span></a></li>
             </ul>
 
-            <button class="button-brown hotel-search-btn" type="button" onclick="window['dialog-main'].showModal()"
-              aria-controls="dialog-main">Хочу сюда!</button>
+            <a class="button-brown hotel-search-btn" href="#">Хочу сюда!</a>
           </nav>
         </div>
 
@@ -58,6 +56,7 @@
               <h1 class="filter-header">Гостиницы Седоны</h1>
               <ul class="breadcrumbs">
                 <li class="breadcrumbs-item">
+                  <span class="visually-hidden">домашняя страница</span>
                   <a class="breadcrumbs-link" href="index.html">
                     <svg class="breadcrumbs-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="none"
                       viewBox="0 0 14 15">
@@ -109,7 +108,7 @@
                   </ul>
                 </fieldset>
                 <fieldset class="catalog-filter-radio">
-                  <legend class="catalog-filter-title">Тип жилья:</legend>
+                  <legend class="catalog-filter-title">Тип Жилья:</legend>
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
                       <label class="control">
@@ -193,7 +192,7 @@
           <ul class="location-list">
             <li class="location-card">
               <a class="location-card-link" href="location.html">
-                <img class="location-card-image" src="img/hotel-amara.jpg" width="300px" height="212px"
+                <img class="location-card-image" src="img/hotel-amara.jpg" width="300" height="212"
                   alt="Вид на звездное небо из расщелены">
                 <h3 class="location-card-title">Amara Resort & Spa</h3>
               </a>
@@ -211,7 +210,7 @@
             </li>
             <li class="location-card">
               <a class="location-card-link" href="location.html">
-                <img class="location-card-image content-image" src="img/hotel-villas.jpg" width="300px" height="212px"
+                <img class="location-card-image content-image" src="img/hotel-villas.jpg" width="300" height="212"
                   alt="Радуга на красными скалами">
                 <h3 class="location-card-title">Villas at Poco Diablo</h3>
               </a>
@@ -229,8 +228,8 @@
             </li>
             <li class="location-card">
               <a class="location-card-link" href="location.html">
-                <img class="location-card-image content-image" src="img/hotel-desertquail.jpg" width="300px"
-                  height="212px" alt="Утро над красными скалами">
+                <img class="location-card-image content-image" src="img/hotel-desertquail.jpg" width="300"
+                  height="212" alt="Утро над красными скалами">
                 <h3 class="location-card-title">Desert Quail Inn</h3>
               </a>
               <span class="location-type">Гостиница</span>
@@ -246,8 +245,8 @@
             </li>
             <li class="location-card">
               <a class="location-card-link" href="location.html">
-                <img class="location-card-image content-image" src="img/hotel-greentree.jpg" width="300px"
-                  height="212px" alt="Ночь над красными скалами">
+                <img class="location-card-image content-image" src="img/hotel-greentree.jpg" width="300"
+                  height="212" alt="Ночь над красными скалами">
                 <h3 class="location-card-title">GreenTree Inn</h3>
               </a>
               <span class="location-type">Гостиница</span>
@@ -349,9 +348,9 @@
           </div>
         </div>
       </footer>
-      <dialog class="dialog-main" id="dialog-main" aria-label="Modal window" aria-labelledby="Поиск гостиницы в Седоне">
+      <dialog class="dialog-main" id="dialog-main" aria-label="Окно поиска гостиниц">
         <span class="visually-hidden">Закрыть</span>
-        <button class="modal-close-button" aria-label="close dialog" formmethod="dialog"
+        <button class="modal-close-button" aria-label="закрыть окно" formmethod="dialog"
           onclick="document.getElementById('dialog-main').close()"></button>
         <section class="modal-content">
           <h2 class="dialog-main-title">Поиск гостиницы в Седоне</h2>
@@ -371,13 +370,13 @@
               <div class="modal-input-wrapper-left">
                 <label class="modal-input-label" for="adults">Взрослые:</label>
                 <div class="number-input-container">
-                  <button class="decrement-button" aria-label="Decrease number">
+                  <button class="decrement-button" type="button" aria-label="уменьшить">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
                       <path fill="none" fill-opacity="none" d="M3 9v2h14V9H3Z" />
                     </svg>
                   </button>
-                  <input class="number-field" id="adults" type="number" aria-label="Number input" value="2">
-                  <button class="increment-button" aria-label="Increase number">
+                  <input class="number-field" id="adults" type="number" aria-label="количество" value="2">
+                  <button class="increment-button" type="button" aria-label="увеличить">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
                       <path fill="none" fill-opacity="none" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
                     </svg>
@@ -387,18 +386,18 @@
               <div class="modal-input-wrapper-right">
                 <label class="modal-input-label" for="children">Дети:</label>
                 <span class="tooltip">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-tip"></button>
+                  <button class="tooltip-toggle" type="button" name="info"></button>
                   <span class="tooltip-text" role="tooltip" id="tooltip-label-tip">Укажите количество детей, которые
                     будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                 </span>
                 <div class="number-input-container">
-                  <button class="decrement-button" aria-label="Decrease number">
+                  <button class="decrement-button" type="button" aria-label="уменьшить">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
                       <path fill="none" d="M3 9v2h14V9H3Z" />
                     </svg>
                   </button>
-                  <input class="number-field" id="children" type="number" aria-label="Number input" value="2">
-                  <button class="increment-button" aria-label="Increase number">
+                  <input class="number-field" id="children" type="number" aria-label="количество" value="2">
+                  <button class="increment-button" type="button" aria-label="увеличить">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20">
                       <path fill="none" fill-opacity="none" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
                     </svg>
