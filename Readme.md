@@ -1,8 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Yuri Tamurkin](https://up.htmlacademy.ru/htmlcss-individual/2/user/2608607).
-* Наставник: `Неизвестно`.
-
+* Наставник: [Кенан Агаев](https://htmlacademy.ru/profile/kenakula).
+* Сайт: [Сайт онлайн](https://yuri-tm.github.io/2608607-sedona-2/)
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
