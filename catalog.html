@@ -24,7 +24,6 @@
                   href="catalog.html">Гостиницы</a></li>
             </ul>
           </nav>
-
           <nav class="navigation-right">
             <ul class="navigation-buttons">
               <li class="navigation-item-icon"><a class="navigation-link" href="#">
@@ -43,11 +42,9 @@
                   <span class="visually-hidden">Избранное</span>
                   <span class="badge">12</span></a></li>
             </ul>
-
             <a class="button-brown hotel-search-btn" href="#">Хочу сюда!</a>
           </nav>
         </div>
-
       </header>
       <!--фильтр-ввод-->
       <main class="main-index main-container" data-test="main">
@@ -59,8 +56,8 @@
                 <li class="breadcrumbs-item">
                   <a class="breadcrumbs-link" href="index.html">
                     <span class="visually-hidden">домашняя страница</span>
-                    <svg class="breadcrumbs-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="15" fill="currentColor"
-                      viewBox="0 0 14 15">
+                    <svg class="breadcrumbs-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="15"
+                      fill="currentColor" viewBox="0 0 14 15">
                       <g fill="#ffffff" clip-path="url(#a)">
                         <path d="m7.371.5-6 5.8v6.2h12V6.3l-6-5.8Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z" />
                         <path d="M5.371 10.5h1V8h2v2.5h1V7h-4v3.5Z" />
@@ -112,7 +109,8 @@
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
                       <label class="control">
-                        <input class="visually-hidden control-input" type="radio" name="Lodging" value="Гостиница" checked>
+                        <input class="visually-hidden control-input" type="radio" name="Lodging" value="Гостиница"
+                          checked>
                         <span class="control-mark"></span>
                         <span class="control-label">Гостиница</span>
                       </label>
@@ -135,7 +133,6 @@
                 </fieldset>
                 <fieldset class="catalog-filter-range">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-
                   <div class="input-area">
                     <label class="catalog-input-area" for="cost-input-min">
                       <input class="cost-input-min" type="number" name="cost-input-min" value="0" id="cost-input-min"
@@ -159,16 +156,12 @@
                           <span class="visually-hidden">Максимальная цена</span>
                         </button>
                       </div>
-
                     </div>
-
                   </div>
-
                 </fieldset>
                 <fieldset class="catalog-filter-buttons">
                   <legend class="visually-hidden">кнопки ввода</legend>
                   <button class=" filter-submit-btn button-blue" type="submit">Применить</button>
-
                   <button class="button-reset-btn button-clear" type="reset">Сбросить</button>
                 </fieldset>
               </form>
@@ -184,12 +177,14 @@
               <option value="cheap">Сначала популярные</option>
               <option value="expensive">Сначала дорогие</option>
             </select>
-            <a class="icon-tiles" href="#">
-              <span class="visually-hidden">Вид: плитки</span><span class="icon-tiles-view view-type"></span></a>
-            <a class="icon-tiles" href="#">
-              <span class="visually-hidden">Вид: по одной</span><span class="icon-single-view view-type"></span></a>
-            <a class="icon-tiles" href="#">
-              <span class="visually-hidden">Вид: список</span><span class="icon-list-view view-type"></span></a>
+            <div class="toggle-view">
+              <a class="icon-tiles" href="catalog.html?view=tile">
+                <span class="visually-hidden">Вид: плитки</span><span class="icon-tiles-view view-type"></span></a>
+              <a class="icon-tiles" href="#catalog.html?view=card">
+                <span class="visually-hidden">Вид: по одной</span><span class="icon-single-view view-type"></span></a>
+              <a class="icon-tiles" href="catalog.html?view=list">
+                <span class="visually-hidden">Вид: список</span><span class="icon-list-view view-type"></span></a>
+            </div>
           </header>
           <!--Карточки гостиниц-->
           <ul class="location-list">
@@ -263,7 +258,6 @@
               <span class="num-rating">рейтинг: 5,0</span>
             </li>
           </ul>
-
           <div class="pagination-container">
             <ul class="pagination">
               <li class="pagination-item">
@@ -299,7 +293,6 @@
           </div>
         </section>
       </main>
-
       <footer class="page-footer" data-test="footer">
         <div class="footer-container">
           <h2 class="visually-hidden">Мы с соцсетях</h2>
@@ -316,7 +309,8 @@
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="social-media-button" href="https://t.me/htmlacademy" aria-label="telegram logo" target="_blank" rel="noreferrer noopener">
+              <a class="social-media-button" href="https://t.me/htmlacademy" aria-label="telegram logo" target="_blank"
+                rel="noreferrer noopener">
                 <span class="visually-hidden">Телеграм</span>
                 <svg class="social-media-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none"
                   viewBox="0 0 18 16">
@@ -326,8 +320,8 @@
               </a>
             </li>
             <li class="footer-social-item">
-              <a class="social-media-button" href="https://www.youtube.com/user/htmlacademyru" aria-label="youtube logo" target="_blank"
-                rel="noreferrer noopener">
+              <a class="social-media-button" href="https://www.youtube.com/user/htmlacademyru" aria-label="youtube logo"
+                target="_blank" rel="noreferrer noopener">
                 <span class="visually-hidden">YouTube</span>
                 <svg class="social-media-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="17" fill="none"
                   viewBox="0 0 22 17">
@@ -337,8 +331,8 @@
               </a>
             </li>
           </ul>
-
-          <address class="contacts"><a class="tel" href="tel:+78128121212" aria-label="телефон">+7 (812) 812-12-12</a></address>
+          <address class="contacts"><a class="tel" href="tel:+78128121212" aria-label="телефон">+7 (812) 812-12-12</a>
+          </address>
           <div class="footer-logo">
             <a class="footer-logo-link" href="https://htmlacademy.ru"><span class="visually-hidden">логотип
                 html-academy</span>
@@ -353,8 +347,7 @@
       </footer>
       <dialog class="dialog-main" id="dialog-main" aria-label="Окно поиска гостиниц">
         <span class="visually-hidden">Закрыть</span>
-        <button class="modal-close-button" type="button" aria-label="закрыть окно" formmethod="dialog"
-          onclick="document.getElementById('dialog-main').close()"></button>
+        <button class="modal-close-button" type="button" aria-label="закрыть окно" onclick="document.getElementById('dialog-main').close()"></button>
         <section class="modal-content">
           <h2 class="dialog-main-title">Поиск гостиницы в Седоне</h2>
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="dialog">
@@ -363,7 +356,6 @@
               <input class="modal-field" type="text" id="arrival-date" name="arrival-date" placeholder="Укажите дату">
               <span class="error-message">Мы не можем отправить вас в прошлое.</span>
             </p>
-
             <p class="field-group">
               <label class="modal-input-label" for="departure-date">Дата Выезда:</label>
               <input class="modal-field" type="text" id="departure-date" name="departure-date"
@@ -413,8 +405,6 @@
             <button class="dialog-button button-blue" type="button">Найти</button>
           </form>
         </section>
-
-
       </dialog>
     </div>
   </body>
