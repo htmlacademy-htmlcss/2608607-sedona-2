@@ -186,6 +186,7 @@ body {
   flex-wrap: nowrap;
   max-width: 1060px;
   justify-content: space-between;
+  align-items: flex-start;
   flex-grow: 1;
 
 }
@@ -195,6 +196,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   min-width: 507px;
+  min-height: 64px;
   margin-right: 2%;
 }
 
@@ -208,7 +210,7 @@ body {
   list-style: none;
   align-items: center;
   align-content: 16px;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   margin-left: 168px;
 }
 
@@ -217,7 +219,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .navigation-item .navigation-link {
@@ -230,15 +233,18 @@ body {
   font-size: 20px;
   line-height: 24px;
 }
+.navigation-link:hover {
+  opacity: 0.6;
+}
 
-.navigation-link-main::after {
+.welcome::before {
   content: "";
   display: block;
   width: 68px;
   background-color: #756257;
   height: 2px;
   position: absolute;
-  top: 63px;
+  left: 253px;
   z-index: 1;
 }
 
@@ -417,7 +423,7 @@ body {
 
 address {
   display: flex;
-  text-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   max-width: 720px;
@@ -486,10 +492,10 @@ a[href^="tel:"] {
 }
 
 .welcome-text {
-  position: absolute;
-  left: 50%;
+  position: relative;
+  left: 19%;
   transform: translateX(-50%);
-  top: 115px;
+  top: 50px;
 }
 
 .main-discription {
@@ -546,30 +552,25 @@ a[href^="tel:"] {
 .advantages-item-long {
   min-width: 100%;
   color: #ffffff;
-}
-
-.dark-blue {
   background-color: #88b3d3;
   color: #ffffff;
-}
-
-.light-blue {
-  background-color: rgba(131, 179, 211, 12%);
-}
-
-.semi-light-blue {
-  background-color: rgba(131, 179, 211, 20%);
 }
 
 .advantages-item-short {
   min-width: 230px;
   max-width: 400px;
+  background-color: rgba(131, 179, 211, 20%);
+}
+.advantages-item-short:nth-of-type(2n) {
+  background-color: rgba(131, 179, 211, 12%);
 }
 
 .advantages-item-wrapper {
   display: flex;
   width: 400px;
-  min-height: 385px;
+  min-height: 166px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .advantages-content-wrapper {
@@ -742,6 +743,8 @@ a[href^="tel:"] {
   line-height: 36px;
   min-width: 376px;
   min-height: 52px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 /*subscription*/
@@ -754,6 +757,7 @@ a[href^="tel:"] {
   background-color: rgba(131, 179, 211, 50%);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   padding: 0 0 104px 0;
   box-sizing: border-box;
   align-items: center;
@@ -1199,9 +1203,10 @@ input[type="number"]:focus {
   width: 191px;
   height: 105px;
   border: none;
-  align-self: flex-end;
+  align-self: flex-start;
   justify-content: space-between;
   margin-bottom: 7px;
+  margin-top: 60px;
 }
 
 .filter-submit-btn {
@@ -1247,12 +1252,12 @@ input[type="number"]:focus {
   min-height: 49px;
   width: 100%;
   margin-bottom: 40px;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 
 .catalog-showcase-heading {
-  margin-right: auto;
+  margin-right: 131px;
   text-transform: uppercase;
   font-size: 30px;
 }
@@ -1266,7 +1271,6 @@ input[type="number"]:focus {
   font-family: inherit;
   font-size: 18px;
   padding: 0 20px 0 20px;
-  margin-right: 70px;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -1289,7 +1293,11 @@ select:not([multiple]) {
 .select-control:disabled {
   opacity: 30%;
 }
-
+.toggle-view {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 216px;
+}
 .icon-tiles {
   display: flex;
   cursor: pointer;
@@ -1356,7 +1364,7 @@ select:not([multiple]) {
   grid-template-columns: repeat(3, 340px);
   list-style: none;
   gap: 20px;
-  margin-bottom: 38px;
+  margin-bottom: 41px;
 }
 
 .location-card {
@@ -1370,6 +1378,7 @@ select:not([multiple]) {
   gap: 16px 0;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
+  grid-auto-flow: column;
 }
 
 .location-card-link {
@@ -1385,7 +1394,7 @@ select:not([multiple]) {
 .location-card-image {
   display: block;
   object-fit: contain;
-  padding-bottom: 16px;
+  padding-bottom: 17px;
 }
 
 .location-card-title {
@@ -1549,7 +1558,7 @@ select:not([multiple]) {
   box-sizing: border-box;
   border-radius: 4px;
   text-decoration: none;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   padding: 16px 12px;
   background-color: #82b3d3;
@@ -1562,9 +1571,8 @@ select:not([multiple]) {
 .pagination-link:hover,
 .pagination-link:focus-visible {
   background-color: #68a2ca;
-  border: 1px solid #82b3d3;
   transition: all 0.2s ease-in-out;
-  outline: none;
+  outline: 1px solid #82b3d3;
 }
 
 .pagination-link:active {
