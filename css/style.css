@@ -1316,8 +1316,6 @@ select:not([multiple]) {
   border-radius: 4px;
 }
 
-.icon-tiles:not(:last-child) {}
-
 .icon-tiles-view.view-type {
   width: 48px;
   height: 48px;
